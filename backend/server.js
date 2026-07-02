@@ -31,9 +31,21 @@ app.use(helmet({
   crossOriginResourcePolicy: false // Allow loading uploaded images from frontend origin
 }));
 
-// Setup CORS with specific whitelist (supports localhost React dev server)
+// Setup CORS with specific whitelist (supports localhost React dev server & deployed Vercel frontends)
+const allowedOrigins = [
+  'http://localhost:5173',
+  'http://127.0.0.1:5173',
+  'https://gearup-secure.vercel.app'
+];
+
 app.use(cors({
-  origin: ['http://localhost:5173', 'http://127.0.0.1:5173'],
+  origin: function (origin, callback) {
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.indexOf(origin) !== -1 || origin.endsWith('.vercel.app')) {
+      return callback(null, true);
+    }
+    return callback(new Error('CORS policy block: Origin not allowed'), false);
+  },
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
