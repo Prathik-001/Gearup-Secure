@@ -12,9 +12,7 @@ node_modules/
 dist/
 build/
 
-# Uploaded assets
-backend/uploads/*
-!backend/uploads/.gitkeep
+
 
 # IDE and OS files
 .vscode/
