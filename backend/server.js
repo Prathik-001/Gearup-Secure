@@ -67,6 +67,9 @@ app.use('/api/blockchain', blockchainRoutes);
 app.get('/health', (req, res) => {
   res.json({ status: 'healthy', timestamp: new Date() });
 });
+app.get('/healthz', (req, res) => {
+  res.json({ status: 'healthy', timestamp: new Date() });
+});
 
 // Serve uploaded assets through a custom security proxy route (optional, but convenient)
 app.get('/api/files/preview/:fileId', (req, res) => {
