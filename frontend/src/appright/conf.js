@@ -1,5 +1,5 @@
 export class Service {
-  baseUrl = 'http://localhost:5000/api';
+  baseUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
   
   // Expose a dummy client object to prevent runtime errors if components access service.client
   client = {
