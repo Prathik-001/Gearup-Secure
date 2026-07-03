@@ -22,6 +22,9 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+// Enable trust proxy for Render reverse proxy rate-limiting accuracy
+app.set('trust proxy', 1);
+
 // Resolve __dirname in ESM
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -51,6 +54,14 @@ app.use(cors({
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
+// Root health check endpoints (placed above rate limiter to avoid 429 health check failures on Render/Vercel)
+app.get('/health', (req, res) => {
+  res.json({ status: 'healthy', timestamp: new Date() });
+});
+app.get('/healthz', (req, res) => {
+  res.json({ status: 'healthy', timestamp: new Date() });
+});
+
 // 🔒 Cybersecurity Layer: Rate Limiters & Body Parsers with strict size limitations
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
@@ -74,14 +85,6 @@ app.use('/api/vehicles', vehicleRoutes);
 app.use('/api/bookings', bookingRoutes);
 app.use('/api/helpline', helplineRoutes);
 app.use('/api/blockchain', blockchainRoutes);
-
-// Root health check endpoint
-app.get('/health', (req, res) => {
-  res.json({ status: 'healthy', timestamp: new Date() });
-});
-app.get('/healthz', (req, res) => {
-  res.json({ status: 'healthy', timestamp: new Date() });
-});
 
 // Serve uploaded assets through a custom security proxy route (optional, but convenient)
 app.get('/api/files/preview/:fileId', (req, res) => {
