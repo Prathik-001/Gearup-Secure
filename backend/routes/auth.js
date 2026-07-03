@@ -38,7 +38,7 @@ router.post('/register', authLimiter, validateRegistration, async (req, res) => 
   try {
     const { name, email, phone, password, state, district, pincode } = req.body;
 
-    const existingUser = await User.findOne({ email });
+    const existingUser = await User.findOne({ email: email.toLowerCase().trim() });
     if (existingUser) {
       return res.status(400).json({ error: "User already exists with this email." });
     }
@@ -49,7 +49,7 @@ router.post('/register', authLimiter, validateRegistration, async (req, res) => 
 
     const user = new User({
       name,
-      email,
+      email: email.toLowerCase().trim(),
       phone,
       password,
       state: state || '',
@@ -79,7 +79,7 @@ router.post('/login', authLimiter, async (req, res) => {
       return res.status(400).json({ error: "Email and password are required." });
     }
 
-    const user = await User.findOne({ email });
+    const user = await User.findOne({ email: email.toLowerCase().trim() });
     if (!user) {
       return res.status(401).json({ error: "Invalid email or password." });
     }

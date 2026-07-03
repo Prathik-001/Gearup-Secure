@@ -156,16 +156,9 @@ const Booking = () => {
     fromDate: '',
     toDate: '',
     location: '',
-    paymentMethod: 'credit',
-    cardNumber: '',
-    expiryMonth: '',
-    expiryYear: '',
-    cvv: '',
-    termsAccepted: false,
   });
 
   const [totalPrice, setTotalPrice] = useState(0);
-  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     if (selectedVehicle) {
@@ -279,105 +272,33 @@ const Booking = () => {
     setBookingData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleCardNumberChange = (e) => {
-    const value = e.target.value.replace(/\D/g, '').slice(0, 16);
-    const formatted = value.replace(/\s/g, '').replace(/(\d{4})/g, '$1 ').trim();
-    setBookingData((prev) => ({ ...prev, cardNumber: formatted }));
-  };
-
-  const handleTermsChange = (e) => {
-    setBookingData((prev) => ({ ...prev, termsAccepted: e.target.checked }));
-  };
-
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    const {
-      fromDate,
-      toDate,
-      location,
-      paymentMethod,
-      cardNumber,
-      expiryMonth,
-      expiryYear,
-      cvv,
-    } = bookingData;
+    const { fromDate, toDate, location } = bookingData;
 
-    if (!fromDate || !toDate || !location || !paymentMethod) {
-      alert('Please fill all fields');
+    if (!fromDate || !toDate || !location) {
+      toast.error('Please complete all details including dates and location.');
       return;
     }
 
-    if (!bookingData.termsAccepted) {
-      alert('Please accept the terms and conditions to proceed.');
+    if (totalPrice <= 0) {
+      toast.error('Please select valid rental dates.');
       return;
     }
 
-    if (
-      (paymentMethod === 'credit' || paymentMethod === 'debit') &&
-      (!cardNumber || !expiryMonth || !expiryYear || !cvv)
-    ) {
-      alert('Please complete your card details.');
-      return;
-    }
-
-    setLoading(true);
-
-    let userId = reduxUserId;
-    if (!userId) {
-      try {
-        const currentUser = await authService.getCurrentUser();
-        userId = currentUser?.$id;
-        if (!userId) throw new Error("User not authenticated");
-      } catch {
-        alert("User session expired. Please log in again.");
-        setLoading(false);
-        return;
-      }
-    }
-
-    try {
-      const response = await service.bookingData(
-        vehicleData.vehicleName,
-        vehicleData.vehicleType,
-        vehicleData.fuelType,
-        vehicleData.rentPrice,
+    navigate('/payment', {
+      state: {
+        vehicleName: vehicleData.vehicleName,
+        vehicleType: vehicleData.vehicleType,
+        fuelType: vehicleData.fuelType,
+        rentPrice: vehicleData.rentPrice,
         totalPrice,
         fromDate,
         toDate,
         location,
         vehicleId,
-        cardNumber,
-        expiryMonth,
-        expiryYear,
-        "pending",
-        userId
-      );
-
-      if (response) {
-        console.log("Booking successful", response);
-        toast.success("Booking successful!", {
-          position: "top-center",
-          className: "bg-green-600 text-white font-bold rounded-lg shadow-lg",
-          bodyClassName: "text-sm",
-          progressClassName: "bg-white",
-          theme: "light",
-        });
-        navigate("/receipt", {
-          state: {
-            vehicleName: vehicleData.vehicleName,
-            fromDate,
-            toDate,
-            location,
-            totalAmount: totalPrice,
-            paymentMethod,
-          },
-        });
       }
-    } catch (err) {
-      console.error("Booking error", err);
-    } finally {
-      setLoading(false);
-    }
+    });
   };
 
   return (
@@ -518,95 +439,6 @@ const Booking = () => {
             )}
           </div>
 
-          {/* Payment Info */}
-          <div className="bg-gray-50 p-6 rounded-xl space-y-6">
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">Payment Method</label>
-              <div className="relative">
-                <CreditCard className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={18} />
-                <select
-                  name="paymentMethod"
-                  value={bookingData.paymentMethod}
-                  onChange={handleInputChange}
-                  className="pl-10 w-full rounded-lg border border-gray-300 p-3 focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white"
-                  required
-                >
-                  <option value="credit">Credit Card</option>
-                  <option value="debit">Debit Card</option>
-                </select>
-              </div>
-            </div>
-
-            {(bookingData.paymentMethod === 'credit' || bookingData.paymentMethod === 'debit') && (
-              <div className="space-y-4">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Card Number</label>
-                  <input
-                    type="text"
-                    name="cardNumber"
-                    value={bookingData.cardNumber}
-                    onChange={handleCardNumberChange}
-                    placeholder="XXXX XXXX XXXX XXXX"
-                    className="w-full rounded-lg border border-gray-300 p-3 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    required={bookingData.paymentMethod !== 'cash'}
-                  />
-                </div>
-                <div className="grid grid-cols-3 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Month</label>
-                    <input
-                      type="text"
-                      name="expiryMonth"
-                      maxLength={2}
-                      value={bookingData.expiryMonth}
-                      onChange={(e) => {
-                        const value = e.target.value.replace(/\D/g, '').slice(0, 2);
-                        if (parseInt(value) <= 12 || value === '') {
-                          handleInputChange(e);
-                        }
-                      }}
-                      placeholder="MM"
-                      className="w-full rounded-lg border border-gray-300 p-3 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      required={bookingData.paymentMethod !== 'cash'}
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Year</label>
-                    <input
-                      type="text"
-                      name="expiryYear"
-                      value={bookingData.expiryYear}
-                      maxLength={4}
-                      onChange={(e) => {
-                        const value = e.target.value.replace(/\D/g, '').slice(0, 2);
-                        handleInputChange(e);
-                      }}
-                      placeholder="YY"
-                      className="w-full rounded-lg border border-gray-300 p-3 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      required={bookingData.paymentMethod !== 'cash'}
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">CVV</label>
-                    <input
-                      type="password"
-                      name="cvv"
-                      value={bookingData.cvv}
-                      maxLength={3}
-                      onChange={(e) => {
-                        const value = e.target.value.replace(/\D/g, '').slice(0, 3);
-                        handleInputChange(e);
-                      }}
-                      placeholder="XXX"
-                      className="w-full rounded-lg border border-gray-300 p-3 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      required={bookingData.paymentMethod !== 'cash'}
-                    />
-                  </div>
-                </div>
-              </div>
-            )}
-          </div>
-           
            {/* Total Price Display */}
             {totalPrice > 0 && (
             <div className="bg-blue-50 p-6 rounded-xl">
@@ -618,30 +450,14 @@ const Booking = () => {
               </p>
             </div>
           )}
-        
-            {/* Terms and Conditions */}
-          <div className="flex items-center space-x-2">
-            <input
-              type="checkbox"
-              id="terms"
-              name="termsAccepted"
-              checked={bookingData.termsAccepted}
-              onChange={handleTermsChange}
-              className="h-5 w-5 text-blue-600 border-gray-300 rounded"
-            />
-            <label htmlFor="terms" className="text-sm text-gray-700">
-              I accept the <Link to={"/terms-and-conditions"} className="text-blue-600 hover:underline">Terms and Conditions</Link>
-            </label>
-          </div>
 
           {/* Submit Button */}
           <div className="flex justify-center mt-6">
-          <button
+            <button
               type="submit"
-              disabled={loading || !bookingData.termsAccepted}
-              className="bg-blue-600 text-white font-semibold py-3 px-6 rounded-xl shadow-lg focus:outline-none hover:bg-blue-700 disabled:bg-gray-400"
+              className="w-full bg-blue-600 text-white font-semibold py-3.5 px-6 rounded-xl shadow-lg focus:outline-none hover:bg-blue-700 transition cursor-pointer text-center text-sm"
             >
-              {loading ? 'Booking...' : 'Book Now'}
+              Proceed to Payment
             </button>
           </div>
         </form>

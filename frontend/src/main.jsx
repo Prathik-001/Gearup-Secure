@@ -28,6 +28,7 @@ import AdminLayout from './components/Admin/AdminLayout.jsx';
 import PaymentRecipt from './components/Booking/PaymentRecipt.jsx'
 import UserData from './components/Admin/UserData.jsx';
 import Booking from './components/Booking/Booking.jsx';
+import Payment from './components/Booking/Payment.jsx';
 import BikeCardList from './components/Admin/BikeCardList.jsx';
 import ActiveRental from './components/Userdash/activeRentalCard.jsx'; 
 import { ToastContainer } from 'react-toastify';
@@ -151,6 +152,10 @@ const router= createBrowserRouter([
       {
         path:"/booking",
         element:<Booking/>
+      },
+      {
+        path:"/payment",
+        element:<ProtectedRoute><Payment/></ProtectedRoute>
       },
       {
         path:"/activerental",
