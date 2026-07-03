@@ -1,0 +1,1139 @@
+{
+  "_type": "Project",
+  "_id": "GearUpProjectID",
+  "name": "GearUp Secure",
+  "ownedElements": [
+    {
+      "_type": "UMLModel",
+      "_id": "UseCaseModelID",
+      "_parent": {
+        "$ref": "GearUpProjectID"
+      },
+      "name": "Use Case Model",
+      "ownedElements": [
+        {
+          "_type": "UMLUseCaseDiagram",
+          "_id": "UseCaseDiagramID",
+          "_parent": {
+            "$ref": "UseCaseModelID"
+          },
+          "name": "Use Case Diagram",
+          "visible": true,
+          "ownedViews": [
+            {
+              "_type": "UMLActorView",
+              "_id": "ActorRiderID_View",
+              "_parent": {
+                "$ref": "UseCaseDiagramID"
+              },
+              "model": {
+                "$ref": "ActorRiderID"
+              },
+              "subViews": [
+                {
+                  "_type": "UMLNameCompartmentView",
+                  "_id": "ActorRiderID_NameCompartment",
+                  "_parent": {
+                    "$ref": "ActorRiderID_View"
+                  },
+                  "model": {
+                    "$ref": "ActorRiderID"
+                  },
+                  "subViews": [
+                    {
+                      "_type": "LabelView",
+                      "_id": "ActorRiderID_NameLabel",
+                      "_parent": {
+                        "$ref": "ActorRiderID_NameCompartment"
+                      },
+                      "text": "User/Rider",
+                      "font": "Arial;13;0",
+                      "left": 70,
+                      "top": 270,
+                      "width": 60,
+                      "height": 13,
+                      "visible": true
+                    }
+                  ],
+                  "font": "Arial;13;0",
+                  "left": 70,
+                  "top": 270,
+                  "width": 60,
+                  "height": 20
+                }
+              ],
+              "font": "Arial;13;0",
+              "left": 85,
+              "top": 200,
+              "width": 30,
+              "height": 65
+            },
+            {
+              "_type": "UMLActorView",
+              "_id": "ActorAdminID_View",
+              "_parent": {
+                "$ref": "UseCaseDiagramID"
+              },
+              "model": {
+                "$ref": "ActorAdminID"
+              },
+              "subViews": [
+                {
+                  "_type": "UMLNameCompartmentView",
+                  "_id": "ActorAdminID_NameCompartment",
+                  "_parent": {
+                    "$ref": "ActorAdminID_View"
+                  },
+                  "model": {
+                    "$ref": "ActorAdminID"
+                  },
+                  "subViews": [
+                    {
+                      "_type": "LabelView",
+                      "_id": "ActorAdminID_NameLabel",
+                      "_parent": {
+                        "$ref": "ActorAdminID_NameCompartment"
+                      },
+                      "text": "Administrator",
+                      "font": "Arial;13;0",
+                      "left": 670,
+                      "top": 270,
+                      "width": 60,
+                      "height": 13,
+                      "visible": true
+                    }
+                  ],
+                  "font": "Arial;13;0",
+                  "left": 670,
+                  "top": 270,
+                  "width": 60,
+                  "height": 20
+                }
+              ],
+              "font": "Arial;13;0",
+              "left": 685,
+              "top": 200,
+              "width": 30,
+              "height": 65
+            },
+            {
+              "_type": "UMLUseCaseView",
+              "_id": "UC1_ID_View",
+              "_parent": {
+                "$ref": "UseCaseDiagramID"
+              },
+              "model": {
+                "$ref": "UC1_ID"
+              },
+              "subViews": [
+                {
+                  "_type": "UMLNameCompartmentView",
+                  "_id": "UC1_ID_NameCompartment",
+                  "_parent": {
+                    "$ref": "UC1_ID_View"
+                  },
+                  "model": {
+                    "$ref": "UC1_ID"
+                  },
+                  "subViews": [
+                    {
+                      "_type": "LabelView",
+                      "_id": "UC1_ID_NameLabel",
+                      "_parent": {
+                        "$ref": "UC1_ID_NameCompartment"
+                      },
+                      "text": "Register/Signup",
+                      "font": "Arial;13;0",
+                      "left": 365,
+                      "top": 60,
+                      "width": 110,
+                      "height": 26,
+                      "visible": true
+                    }
+                  ],
+                  "font": "Arial;13;0",
+                  "left": 360,
+                  "top": 55,
+                  "width": 120,
+                  "height": 36
+                }
+              ],
+              "font": "Arial;13;0",
+              "left": 350,
+              "top": 50,
+              "width": 140,
+              "height": 46
+            },
+            {
+              "_type": "UMLUseCaseView",
+              "_id": "UC2_ID_View",
+              "_parent": {
+                "$ref": "UseCaseDiagramID"
+              },
+              "model": {
+                "$ref": "UC2_ID"
+              },
+              "subViews": [
+                {
+                  "_type": "UMLNameCompartmentView",
+                  "_id": "UC2_ID_NameCompartment",
+                  "_parent": {
+                    "$ref": "UC2_ID_View"
+                  },
+                  "model": {
+                    "$ref": "UC2_ID"
+                  },
+                  "subViews": [
+                    {
+                      "_type": "LabelView",
+                      "_id": "UC2_ID_NameLabel",
+                      "_parent": {
+                        "$ref": "UC2_ID_NameCompartment"
+                      },
+                      "text": "Login/Logout",
+                      "font": "Arial;13;0",
+                      "left": 365,
+                      "top": 120,
+                      "width": 110,
+                      "height": 26,
+                      "visible": true
+                    }
+                  ],
+                  "font": "Arial;13;0",
+                  "left": 360,
+                  "top": 115,
+                  "width": 120,
+                  "height": 36
+                }
+              ],
+              "font": "Arial;13;0",
+              "left": 350,
+              "top": 110,
+              "width": 140,
+              "height": 46
+            },
+            {
+              "_type": "UMLUseCaseView",
+              "_id": "UC3_ID_View",
+              "_parent": {
+                "$ref": "UseCaseDiagramID"
+              },
+              "model": {
+                "$ref": "UC3_ID"
+              },
+              "subViews": [
+                {
+                  "_type": "UMLNameCompartmentView",
+                  "_id": "UC3_ID_NameCompartment",
+                  "_parent": {
+                    "$ref": "UC3_ID_View"
+                  },
+                  "model": {
+                    "$ref": "UC3_ID"
+                  },
+                  "subViews": [
+                    {
+                      "_type": "LabelView",
+                      "_id": "UC3_ID_NameLabel",
+                      "_parent": {
+                        "$ref": "UC3_ID_NameCompartment"
+                      },
+                      "text": "Share/List Vehicle",
+                      "font": "Arial;13;0",
+                      "left": 365,
+                      "top": 180,
+                      "width": 110,
+                      "height": 26,
+                      "visible": true
+                    }
+                  ],
+                  "font": "Arial;13;0",
+                  "left": 360,
+                  "top": 175,
+                  "width": 120,
+                  "height": 36
+                }
+              ],
+              "font": "Arial;13;0",
+              "left": 350,
+              "top": 170,
+              "width": 140,
+              "height": 46
+            },
+            {
+              "_type": "UMLUseCaseView",
+              "_id": "UC4_ID_View",
+              "_parent": {
+                "$ref": "UseCaseDiagramID"
+              },
+              "model": {
+                "$ref": "UC4_ID"
+              },
+              "subViews": [
+                {
+                  "_type": "UMLNameCompartmentView",
+                  "_id": "UC4_ID_NameCompartment",
+                  "_parent": {
+                    "$ref": "UC4_ID_View"
+                  },
+                  "model": {
+                    "$ref": "UC4_ID"
+                  },
+                  "subViews": [
+                    {
+                      "_type": "LabelView",
+                      "_id": "UC4_ID_NameLabel",
+                      "_parent": {
+                        "$ref": "UC4_ID_NameCompartment"
+                      },
+                      "text": "View & Browse Vehicles",
+                      "font": "Arial;13;0",
+                      "left": 365,
+                      "top": 240,
+                      "width": 110,
+                      "height": 26,
+                      "visible": true
+                    }
+                  ],
+                  "font": "Arial;13;0",
+                  "left": 360,
+                  "top": 235,
+                  "width": 120,
+                  "height": 36
+                }
+              ],
+              "font": "Arial;13;0",
+              "left": 350,
+              "top": 230,
+              "width": 140,
+              "height": 46
+            },
+            {
+              "_type": "UMLUseCaseView",
+              "_id": "UC5_ID_View",
+              "_parent": {
+                "$ref": "UseCaseDiagramID"
+              },
+              "model": {
+                "$ref": "UC5_ID"
+              },
+              "subViews": [
+                {
+                  "_type": "UMLNameCompartmentView",
+                  "_id": "UC5_ID_NameCompartment",
+                  "_parent": {
+                    "$ref": "UC5_ID_View"
+                  },
+                  "model": {
+                    "$ref": "UC5_ID"
+                  },
+                  "subViews": [
+                    {
+                      "_type": "LabelView",
+                      "_id": "UC5_ID_NameLabel",
+                      "_parent": {
+                        "$ref": "UC5_ID_NameCompartment"
+                      },
+                      "text": "Book Rental & Select Shop",
+                      "font": "Arial;13;0",
+                      "left": 365,
+                      "top": 300,
+                      "width": 110,
+                      "height": 26,
+                      "visible": true
+                    }
+                  ],
+                  "font": "Arial;13;0",
+                  "left": 360,
+                  "top": 295,
+                  "width": 120,
+                  "height": 36
+                }
+              ],
+              "font": "Arial;13;0",
+              "left": 350,
+              "top": 290,
+              "width": 140,
+              "height": 46
+            },
+            {
+              "_type": "UMLUseCaseView",
+              "_id": "UC6_ID_View",
+              "_parent": {
+                "$ref": "UseCaseDiagramID"
+              },
+              "model": {
+                "$ref": "UC6_ID"
+              },
+              "subViews": [
+                {
+                  "_type": "UMLNameCompartmentView",
+                  "_id": "UC6_ID_NameCompartment",
+                  "_parent": {
+                    "$ref": "UC6_ID_View"
+                  },
+                  "model": {
+                    "$ref": "UC6_ID"
+                  },
+                  "subViews": [
+                    {
+                      "_type": "LabelView",
+                      "_id": "UC6_ID_NameLabel",
+                      "_parent": {
+                        "$ref": "UC6_ID_NameCompartment"
+                      },
+                      "text": "Secure Payment Checkout",
+                      "font": "Arial;13;0",
+                      "left": 365,
+                      "top": 360,
+                      "width": 110,
+                      "height": 26,
+                      "visible": true
+                    }
+                  ],
+                  "font": "Arial;13;0",
+                  "left": 360,
+                  "top": 355,
+                  "width": 120,
+                  "height": 36
+                }
+              ],
+              "font": "Arial;13;0",
+              "left": 350,
+              "top": 350,
+              "width": 140,
+              "height": 46
+            },
+            {
+              "_type": "UMLUseCaseView",
+              "_id": "UC7_ID_View",
+              "_parent": {
+                "$ref": "UseCaseDiagramID"
+              },
+              "model": {
+                "$ref": "UC7_ID"
+              },
+              "subViews": [
+                {
+                  "_type": "UMLNameCompartmentView",
+                  "_id": "UC7_ID_NameCompartment",
+                  "_parent": {
+                    "$ref": "UC7_ID_View"
+                  },
+                  "model": {
+                    "$ref": "UC7_ID"
+                  },
+                  "subViews": [
+                    {
+                      "_type": "LabelView",
+                      "_id": "UC7_ID_NameLabel",
+                      "_parent": {
+                        "$ref": "UC7_ID_NameCompartment"
+                      },
+                      "text": "Audit Transaction Ledger",
+                      "font": "Arial;13;0",
+                      "left": 365,
+                      "top": 420,
+                      "width": 110,
+                      "height": 26,
+                      "visible": true
+                    }
+                  ],
+                  "font": "Arial;13;0",
+                  "left": 360,
+                  "top": 415,
+                  "width": 120,
+                  "height": 36
+                }
+              ],
+              "font": "Arial;13;0",
+              "left": 350,
+              "top": 410,
+              "width": 140,
+              "height": 46
+            },
+            {
+              "_type": "UMLUseCaseView",
+              "_id": "UC8_ID_View",
+              "_parent": {
+                "$ref": "UseCaseDiagramID"
+              },
+              "model": {
+                "$ref": "UC8_ID"
+              },
+              "subViews": [
+                {
+                  "_type": "UMLNameCompartmentView",
+                  "_id": "UC8_ID_NameCompartment",
+                  "_parent": {
+                    "$ref": "UC8_ID_View"
+                  },
+                  "model": {
+                    "$ref": "UC8_ID"
+                  },
+                  "subViews": [
+                    {
+                      "_type": "LabelView",
+                      "_id": "UC8_ID_NameLabel",
+                      "_parent": {
+                        "$ref": "UC8_ID_NameCompartment"
+                      },
+                      "text": "Approve/Review Vehicle Listings",
+                      "font": "Arial;13;0",
+                      "left": 365,
+                      "top": 480,
+                      "width": 110,
+                      "height": 26,
+                      "visible": true
+                    }
+                  ],
+                  "font": "Arial;13;0",
+                  "left": 360,
+                  "top": 475,
+                  "width": 120,
+                  "height": 36
+                }
+              ],
+              "font": "Arial;13;0",
+              "left": 350,
+              "top": 470,
+              "width": 140,
+              "height": 46
+            },
+            {
+              "_type": "UMLUseCaseView",
+              "_id": "UC9_ID_View",
+              "_parent": {
+                "$ref": "UseCaseDiagramID"
+              },
+              "model": {
+                "$ref": "UC9_ID"
+              },
+              "subViews": [
+                {
+                  "_type": "UMLNameCompartmentView",
+                  "_id": "UC9_ID_NameCompartment",
+                  "_parent": {
+                    "$ref": "UC9_ID_View"
+                  },
+                  "model": {
+                    "$ref": "UC9_ID"
+                  },
+                  "subViews": [
+                    {
+                      "_type": "LabelView",
+                      "_id": "UC9_ID_NameLabel",
+                      "_parent": {
+                        "$ref": "UC9_ID_NameCompartment"
+                      },
+                      "text": "Manage User Accounts",
+                      "font": "Arial;13;0",
+                      "left": 365,
+                      "top": 540,
+                      "width": 110,
+                      "height": 26,
+                      "visible": true
+                    }
+                  ],
+                  "font": "Arial;13;0",
+                  "left": 360,
+                  "top": 535,
+                  "width": 120,
+                  "height": 36
+                }
+              ],
+              "font": "Arial;13;0",
+              "left": 350,
+              "top": 530,
+              "width": 140,
+              "height": 46
+            },
+            {
+              "_type": "UMLAssociationView",
+              "_id": "Assoc_Rider_UC1_View",
+              "_parent": {
+                "$ref": "UseCaseDiagramID"
+              },
+              "model": {
+                "$ref": "Assoc_Rider_UC1"
+              },
+              "head": {
+                "$ref": "UC1_ID_View"
+              },
+              "tail": {
+                "$ref": "ActorRiderID_View"
+              },
+              "lineStyle": 1,
+              "points": []
+            },
+            {
+              "_type": "UMLAssociationView",
+              "_id": "Assoc_Rider_UC2_View",
+              "_parent": {
+                "$ref": "UseCaseDiagramID"
+              },
+              "model": {
+                "$ref": "Assoc_Rider_UC2"
+              },
+              "head": {
+                "$ref": "UC2_ID_View"
+              },
+              "tail": {
+                "$ref": "ActorRiderID_View"
+              },
+              "lineStyle": 1,
+              "points": []
+            },
+            {
+              "_type": "UMLAssociationView",
+              "_id": "Assoc_Rider_UC3_View",
+              "_parent": {
+                "$ref": "UseCaseDiagramID"
+              },
+              "model": {
+                "$ref": "Assoc_Rider_UC3"
+              },
+              "head": {
+                "$ref": "UC3_ID_View"
+              },
+              "tail": {
+                "$ref": "ActorRiderID_View"
+              },
+              "lineStyle": 1,
+              "points": []
+            },
+            {
+              "_type": "UMLAssociationView",
+              "_id": "Assoc_Rider_UC4_View",
+              "_parent": {
+                "$ref": "UseCaseDiagramID"
+              },
+              "model": {
+                "$ref": "Assoc_Rider_UC4"
+              },
+              "head": {
+                "$ref": "UC4_ID_View"
+              },
+              "tail": {
+                "$ref": "ActorRiderID_View"
+              },
+              "lineStyle": 1,
+              "points": []
+            },
+            {
+              "_type": "UMLAssociationView",
+              "_id": "Assoc_Rider_UC5_View",
+              "_parent": {
+                "$ref": "UseCaseDiagramID"
+              },
+              "model": {
+                "$ref": "Assoc_Rider_UC5"
+              },
+              "head": {
+                "$ref": "UC5_ID_View"
+              },
+              "tail": {
+                "$ref": "ActorRiderID_View"
+              },
+              "lineStyle": 1,
+              "points": []
+            },
+            {
+              "_type": "UMLAssociationView",
+              "_id": "Assoc_Rider_UC6_View",
+              "_parent": {
+                "$ref": "UseCaseDiagramID"
+              },
+              "model": {
+                "$ref": "Assoc_Rider_UC6"
+              },
+              "head": {
+                "$ref": "UC6_ID_View"
+              },
+              "tail": {
+                "$ref": "ActorRiderID_View"
+              },
+              "lineStyle": 1,
+              "points": []
+            },
+            {
+              "_type": "UMLAssociationView",
+              "_id": "Assoc_Rider_UC7_View",
+              "_parent": {
+                "$ref": "UseCaseDiagramID"
+              },
+              "model": {
+                "$ref": "Assoc_Rider_UC7"
+              },
+              "head": {
+                "$ref": "UC7_ID_View"
+              },
+              "tail": {
+                "$ref": "ActorRiderID_View"
+              },
+              "lineStyle": 1,
+              "points": []
+            },
+            {
+              "_type": "UMLAssociationView",
+              "_id": "Assoc_Admin_UC2_View",
+              "_parent": {
+                "$ref": "UseCaseDiagramID"
+              },
+              "model": {
+                "$ref": "Assoc_Admin_UC2"
+              },
+              "head": {
+                "$ref": "UC2_ID_View"
+              },
+              "tail": {
+                "$ref": "ActorAdminID_View"
+              },
+              "lineStyle": 1,
+              "points": []
+            },
+            {
+              "_type": "UMLAssociationView",
+              "_id": "Assoc_Admin_UC7_View",
+              "_parent": {
+                "$ref": "UseCaseDiagramID"
+              },
+              "model": {
+                "$ref": "Assoc_Admin_UC7"
+              },
+              "head": {
+                "$ref": "UC7_ID_View"
+              },
+              "tail": {
+                "$ref": "ActorAdminID_View"
+              },
+              "lineStyle": 1,
+              "points": []
+            },
+            {
+              "_type": "UMLAssociationView",
+              "_id": "Assoc_Admin_UC8_View",
+              "_parent": {
+                "$ref": "UseCaseDiagramID"
+              },
+              "model": {
+                "$ref": "Assoc_Admin_UC8"
+              },
+              "head": {
+                "$ref": "UC8_ID_View"
+              },
+              "tail": {
+                "$ref": "ActorAdminID_View"
+              },
+              "lineStyle": 1,
+              "points": []
+            },
+            {
+              "_type": "UMLAssociationView",
+              "_id": "Assoc_Admin_UC9_View",
+              "_parent": {
+                "$ref": "UseCaseDiagramID"
+              },
+              "model": {
+                "$ref": "Assoc_Admin_UC9"
+              },
+              "head": {
+                "$ref": "UC9_ID_View"
+              },
+              "tail": {
+                "$ref": "ActorAdminID_View"
+              },
+              "lineStyle": 1,
+              "points": []
+            }
+          ]
+        },
+        {
+          "_type": "UMLActor",
+          "_id": "ActorRiderID",
+          "_parent": {
+            "$ref": "UseCaseModelID"
+          },
+          "name": "User/Rider"
+        },
+        {
+          "_type": "UMLActor",
+          "_id": "ActorAdminID",
+          "_parent": {
+            "$ref": "UseCaseModelID"
+          },
+          "name": "Administrator"
+        },
+        {
+          "_type": "UMLUseCase",
+          "_id": "UC1_ID",
+          "_parent": {
+            "$ref": "UseCaseModelID"
+          },
+          "name": "Register/Signup"
+        },
+        {
+          "_type": "UMLUseCase",
+          "_id": "UC2_ID",
+          "_parent": {
+            "$ref": "UseCaseModelID"
+          },
+          "name": "Login/Logout"
+        },
+        {
+          "_type": "UMLUseCase",
+          "_id": "UC3_ID",
+          "_parent": {
+            "$ref": "UseCaseModelID"
+          },
+          "name": "Share/List Vehicle"
+        },
+        {
+          "_type": "UMLUseCase",
+          "_id": "UC4_ID",
+          "_parent": {
+            "$ref": "UseCaseModelID"
+          },
+          "name": "View & Browse Vehicles"
+        },
+        {
+          "_type": "UMLUseCase",
+          "_id": "UC5_ID",
+          "_parent": {
+            "$ref": "UseCaseModelID"
+          },
+          "name": "Book Rental & Select Shop"
+        },
+        {
+          "_type": "UMLUseCase",
+          "_id": "UC6_ID",
+          "_parent": {
+            "$ref": "UseCaseModelID"
+          },
+          "name": "Secure Payment Checkout"
+        },
+        {
+          "_type": "UMLUseCase",
+          "_id": "UC7_ID",
+          "_parent": {
+            "$ref": "UseCaseModelID"
+          },
+          "name": "Audit Transaction Ledger"
+        },
+        {
+          "_type": "UMLUseCase",
+          "_id": "UC8_ID",
+          "_parent": {
+            "$ref": "UseCaseModelID"
+          },
+          "name": "Approve/Review Vehicle Listings"
+        },
+        {
+          "_type": "UMLUseCase",
+          "_id": "UC9_ID",
+          "_parent": {
+            "$ref": "UseCaseModelID"
+          },
+          "name": "Manage User Accounts"
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "Assoc_Rider_UC1",
+          "_parent": {
+            "$ref": "UseCaseModelID"
+          },
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "Assoc_Rider_UC1_End1",
+            "_parent": {
+              "$ref": "Assoc_Rider_UC1"
+            },
+            "reference": {
+              "$ref": "ActorRiderID"
+            }
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "Assoc_Rider_UC1_End2",
+            "_parent": {
+              "$ref": "Assoc_Rider_UC1"
+            },
+            "reference": {
+              "$ref": "UC1_ID"
+            }
+          }
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "Assoc_Rider_UC2",
+          "_parent": {
+            "$ref": "UseCaseModelID"
+          },
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "Assoc_Rider_UC2_End1",
+            "_parent": {
+              "$ref": "Assoc_Rider_UC2"
+            },
+            "reference": {
+              "$ref": "ActorRiderID"
+            }
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "Assoc_Rider_UC2_End2",
+            "_parent": {
+              "$ref": "Assoc_Rider_UC2"
+            },
+            "reference": {
+              "$ref": "UC2_ID"
+            }
+          }
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "Assoc_Rider_UC3",
+          "_parent": {
+            "$ref": "UseCaseModelID"
+          },
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "Assoc_Rider_UC3_End1",
+            "_parent": {
+              "$ref": "Assoc_Rider_UC3"
+            },
+            "reference": {
+              "$ref": "ActorRiderID"
+            }
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "Assoc_Rider_UC3_End2",
+            "_parent": {
+              "$ref": "Assoc_Rider_UC3"
+            },
+            "reference": {
+              "$ref": "UC3_ID"
+            }
+          }
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "Assoc_Rider_UC4",
+          "_parent": {
+            "$ref": "UseCaseModelID"
+          },
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "Assoc_Rider_UC4_End1",
+            "_parent": {
+              "$ref": "Assoc_Rider_UC4"
+            },
+            "reference": {
+              "$ref": "ActorRiderID"
+            }
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "Assoc_Rider_UC4_End2",
+            "_parent": {
+              "$ref": "Assoc_Rider_UC4"
+            },
+            "reference": {
+              "$ref": "UC4_ID"
+            }
+          }
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "Assoc_Rider_UC5",
+          "_parent": {
+            "$ref": "UseCaseModelID"
+          },
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "Assoc_Rider_UC5_End1",
+            "_parent": {
+              "$ref": "Assoc_Rider_UC5"
+            },
+            "reference": {
+              "$ref": "ActorRiderID"
+            }
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "Assoc_Rider_UC5_End2",
+            "_parent": {
+              "$ref": "Assoc_Rider_UC5"
+            },
+            "reference": {
+              "$ref": "UC5_ID"
+            }
+          }
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "Assoc_Rider_UC6",
+          "_parent": {
+            "$ref": "UseCaseModelID"
+          },
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "Assoc_Rider_UC6_End1",
+            "_parent": {
+              "$ref": "Assoc_Rider_UC6"
+            },
+            "reference": {
+              "$ref": "ActorRiderID"
+            }
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "Assoc_Rider_UC6_End2",
+            "_parent": {
+              "$ref": "Assoc_Rider_UC6"
+            },
+            "reference": {
+              "$ref": "UC6_ID"
+            }
+          }
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "Assoc_Rider_UC7",
+          "_parent": {
+            "$ref": "UseCaseModelID"
+          },
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "Assoc_Rider_UC7_End1",
+            "_parent": {
+              "$ref": "Assoc_Rider_UC7"
+            },
+            "reference": {
+              "$ref": "ActorRiderID"
+            }
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "Assoc_Rider_UC7_End2",
+            "_parent": {
+              "$ref": "Assoc_Rider_UC7"
+            },
+            "reference": {
+              "$ref": "UC7_ID"
+            }
+          }
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "Assoc_Admin_UC2",
+          "_parent": {
+            "$ref": "UseCaseModelID"
+          },
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "Assoc_Admin_UC2_End1",
+            "_parent": {
+              "$ref": "Assoc_Admin_UC2"
+            },
+            "reference": {
+              "$ref": "ActorAdminID"
+            }
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "Assoc_Admin_UC2_End2",
+            "_parent": {
+              "$ref": "Assoc_Admin_UC2"
+            },
+            "reference": {
+              "$ref": "UC2_ID"
+            }
+          }
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "Assoc_Admin_UC7",
+          "_parent": {
+            "$ref": "UseCaseModelID"
+          },
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "Assoc_Admin_UC7_End1",
+            "_parent": {
+              "$ref": "Assoc_Admin_UC7"
+            },
+            "reference": {
+              "$ref": "ActorAdminID"
+            }
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "Assoc_Admin_UC7_End2",
+            "_parent": {
+              "$ref": "Assoc_Admin_UC7"
+            },
+            "reference": {
+              "$ref": "UC7_ID"
+            }
+          }
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "Assoc_Admin_UC8",
+          "_parent": {
+            "$ref": "UseCaseModelID"
+          },
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "Assoc_Admin_UC8_End1",
+            "_parent": {
+              "$ref": "Assoc_Admin_UC8"
+            },
+            "reference": {
+              "$ref": "ActorAdminID"
+            }
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "Assoc_Admin_UC8_End2",
+            "_parent": {
+              "$ref": "Assoc_Admin_UC8"
+            },
+            "reference": {
+              "$ref": "UC8_ID"
+            }
+          }
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "Assoc_Admin_UC9",
+          "_parent": {
+            "$ref": "UseCaseModelID"
+          },
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "Assoc_Admin_UC9_End1",
+            "_parent": {
+              "$ref": "Assoc_Admin_UC9"
+            },
+            "reference": {
+              "$ref": "ActorAdminID"
+            }
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "Assoc_Admin_UC9_End2",
+            "_parent": {
+              "$ref": "Assoc_Admin_UC9"
+            },
+            "reference": {
+              "$ref": "UC9_ID"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
