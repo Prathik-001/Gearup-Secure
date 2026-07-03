@@ -1144,7 +1144,7 @@
       "name": "Data Flow Model",
       "ownedElements": [
         {
-          "_type": "UMLUseCaseDiagram",
+          "_type": "DFDDataFlowDiagram",
           "_id": "DFDDiagramID",
           "_parent": {
             "$ref": "DFDModelID"
@@ -1153,7 +1153,7 @@
           "visible": true,
           "ownedViews": [
             {
-              "_type": "UMLActorView",
+              "_type": "DFDExternalEntityView",
               "_id": "DFDEntUserCustomer_View",
               "_parent": {
                 "$ref": "DFDDiagramID"
@@ -1163,45 +1163,28 @@
               },
               "subViews": [
                 {
-                  "_type": "UMLNameCompartmentView",
-                  "_id": "DFDEntUserCustomer_NameCompartment",
+                  "_type": "LabelView",
+                  "_id": "DFDEntUserCustomer_NameLabel",
                   "_parent": {
                     "$ref": "DFDEntUserCustomer_View"
                   },
-                  "model": {
-                    "$ref": "DFDEntUserCustomer"
-                  },
-                  "subViews": [
-                    {
-                      "_type": "LabelView",
-                      "_id": "DFDEntUserCustomer_NameLabel",
-                      "_parent": {
-                        "$ref": "DFDEntUserCustomer_NameCompartment"
-                      },
-                      "text": "User Customer",
-                      "font": "Arial;13;0",
-                      "left": 50,
-                      "top": 310,
-                      "width": 60,
-                      "height": 13,
-                      "visible": true
-                    }
-                  ],
-                  "font": "Arial;13;0",
-                  "left": 50,
-                  "top": 310,
-                  "width": 60,
-                  "height": 20
+                  "text": "User Customer",
+                  "font": "Arial;13;1",
+                  "left": 70,
+                  "top": 235,
+                  "width": 90,
+                  "height": 26,
+                  "visible": true
                 }
               ],
               "font": "Arial;13;0",
-              "left": 65,
-              "top": 240,
-              "width": 30,
-              "height": 65
+              "left": 60,
+              "top": 220,
+              "width": 110,
+              "height": 55
             },
             {
-              "_type": "UMLActorView",
+              "_type": "DFDExternalEntityView",
               "_id": "DFDEntAdmin_View",
               "_parent": {
                 "$ref": "DFDDiagramID"
@@ -1211,45 +1194,28 @@
               },
               "subViews": [
                 {
-                  "_type": "UMLNameCompartmentView",
-                  "_id": "DFDEntAdmin_NameCompartment",
+                  "_type": "LabelView",
+                  "_id": "DFDEntAdmin_NameLabel",
                   "_parent": {
                     "$ref": "DFDEntAdmin_View"
                   },
-                  "model": {
-                    "$ref": "DFDEntAdmin"
-                  },
-                  "subViews": [
-                    {
-                      "_type": "LabelView",
-                      "_id": "DFDEntAdmin_NameLabel",
-                      "_parent": {
-                        "$ref": "DFDEntAdmin_NameCompartment"
-                      },
-                      "text": "Administrator Admin",
-                      "font": "Arial;13;0",
-                      "left": 730,
-                      "top": 310,
-                      "width": 60,
-                      "height": 13,
-                      "visible": true
-                    }
-                  ],
-                  "font": "Arial;13;0",
-                  "left": 730,
-                  "top": 310,
-                  "width": 60,
-                  "height": 20
+                  "text": "Administrator Admin",
+                  "font": "Arial;13;1",
+                  "left": 770,
+                  "top": 235,
+                  "width": 90,
+                  "height": 26,
+                  "visible": true
                 }
               ],
               "font": "Arial;13;0",
-              "left": 745,
-              "top": 240,
-              "width": 30,
-              "height": 65
+              "left": 760,
+              "top": 220,
+              "width": 110,
+              "height": 55
             },
             {
-              "_type": "UMLActorView",
+              "_type": "DFDExternalEntityView",
               "_id": "DFDEntPlatform_View",
               "_parent": {
                 "$ref": "DFDDiagramID"
@@ -1259,45 +1225,28 @@
               },
               "subViews": [
                 {
-                  "_type": "UMLNameCompartmentView",
-                  "_id": "DFDEntPlatform_NameCompartment",
+                  "_type": "LabelView",
+                  "_id": "DFDEntPlatform_NameLabel",
                   "_parent": {
                     "$ref": "DFDEntPlatform_View"
                   },
-                  "model": {
-                    "$ref": "DFDEntPlatform"
-                  },
-                  "subViews": [
-                    {
-                      "_type": "LabelView",
-                      "_id": "DFDEntPlatform_NameLabel",
-                      "_parent": {
-                        "$ref": "DFDEntPlatform_NameCompartment"
-                      },
-                      "text": "GearUp Platform",
-                      "font": "Arial;13;0",
-                      "left": 730,
-                      "top": 120,
-                      "width": 60,
-                      "height": 13,
-                      "visible": true
-                    }
-                  ],
-                  "font": "Arial;13;0",
-                  "left": 730,
-                  "top": 120,
-                  "width": 60,
-                  "height": 20
+                  "text": "GearUp Platform",
+                  "font": "Arial;13;1",
+                  "left": 770,
+                  "top": 65,
+                  "width": 90,
+                  "height": 26,
+                  "visible": true
                 }
               ],
               "font": "Arial;13;0",
-              "left": 745,
+              "left": 760,
               "top": 50,
-              "width": 30,
-              "height": 65
+              "width": 110,
+              "height": 55
             },
             {
-              "_type": "UMLUseCaseView",
+              "_type": "DFDProcessView",
               "_id": "DFDProc1_View",
               "_parent": {
                 "$ref": "DFDDiagramID"
@@ -1307,45 +1256,28 @@
               },
               "subViews": [
                 {
-                  "_type": "UMLNameCompartmentView",
-                  "_id": "DFDProc1_NameCompartment",
+                  "_type": "LabelView",
+                  "_id": "DFDProc1_NameLabel",
                   "_parent": {
                     "$ref": "DFDProc1_View"
                   },
-                  "model": {
-                    "$ref": "DFDProc1"
-                  },
-                  "subViews": [
-                    {
-                      "_type": "LabelView",
-                      "_id": "DFDProc1_NameLabel",
-                      "_parent": {
-                        "$ref": "DFDProc1_NameCompartment"
-                      },
-                      "text": "1. Register & Login",
-                      "font": "Arial;12;0",
-                      "left": 430,
-                      "top": 60,
-                      "width": 130,
-                      "height": 35,
-                      "visible": true
-                    }
-                  ],
+                  "text": "1. Register & Login",
                   "font": "Arial;13;0",
-                  "left": 425,
-                  "top": 55,
-                  "width": 140,
-                  "height": 45
+                  "left": 435,
+                  "top": 65,
+                  "width": 90,
+                  "height": 26,
+                  "visible": true
                 }
               ],
               "font": "Arial;13;0",
               "left": 420,
               "top": 50,
-              "width": 150,
+              "width": 120,
               "height": 55
             },
             {
-              "_type": "UMLUseCaseView",
+              "_type": "DFDProcessView",
               "_id": "DFDProc2_View",
               "_parent": {
                 "$ref": "DFDDiagramID"
@@ -1355,45 +1287,28 @@
               },
               "subViews": [
                 {
-                  "_type": "UMLNameCompartmentView",
-                  "_id": "DFDProc2_NameCompartment",
+                  "_type": "LabelView",
+                  "_id": "DFDProc2_NameLabel",
                   "_parent": {
                     "$ref": "DFDProc2_View"
                   },
-                  "model": {
-                    "$ref": "DFDProc2"
-                  },
-                  "subViews": [
-                    {
-                      "_type": "LabelView",
-                      "_id": "DFDProc2_NameLabel",
-                      "_parent": {
-                        "$ref": "DFDProc2_NameCompartment"
-                      },
-                      "text": "2. Share/List Vehicle",
-                      "font": "Arial;12;0",
-                      "left": 430,
-                      "top": 170,
-                      "width": 130,
-                      "height": 35,
-                      "visible": true
-                    }
-                  ],
+                  "text": "2. Share/List Vehicle",
                   "font": "Arial;13;0",
-                  "left": 425,
-                  "top": 165,
-                  "width": 140,
-                  "height": 45
+                  "left": 435,
+                  "top": 175,
+                  "width": 90,
+                  "height": 26,
+                  "visible": true
                 }
               ],
               "font": "Arial;13;0",
               "left": 420,
               "top": 160,
-              "width": 150,
+              "width": 120,
               "height": 55
             },
             {
-              "_type": "UMLUseCaseView",
+              "_type": "DFDProcessView",
               "_id": "DFDProc3_View",
               "_parent": {
                 "$ref": "DFDDiagramID"
@@ -1403,45 +1318,28 @@
               },
               "subViews": [
                 {
-                  "_type": "UMLNameCompartmentView",
-                  "_id": "DFDProc3_NameCompartment",
+                  "_type": "LabelView",
+                  "_id": "DFDProc3_NameLabel",
                   "_parent": {
                     "$ref": "DFDProc3_View"
                   },
-                  "model": {
-                    "$ref": "DFDProc3"
-                  },
-                  "subViews": [
-                    {
-                      "_type": "LabelView",
-                      "_id": "DFDProc3_NameLabel",
-                      "_parent": {
-                        "$ref": "DFDProc3_NameCompartment"
-                      },
-                      "text": "3. Book Rental",
-                      "font": "Arial;12;0",
-                      "left": 430,
-                      "top": 280,
-                      "width": 130,
-                      "height": 35,
-                      "visible": true
-                    }
-                  ],
+                  "text": "3. Book Rental",
                   "font": "Arial;13;0",
-                  "left": 425,
-                  "top": 275,
-                  "width": 140,
-                  "height": 45
+                  "left": 435,
+                  "top": 285,
+                  "width": 90,
+                  "height": 26,
+                  "visible": true
                 }
               ],
               "font": "Arial;13;0",
               "left": 420,
               "top": 270,
-              "width": 150,
+              "width": 120,
               "height": 55
             },
             {
-              "_type": "UMLUseCaseView",
+              "_type": "DFDProcessView",
               "_id": "DFDProc4_View",
               "_parent": {
                 "$ref": "DFDDiagramID"
@@ -1451,45 +1349,28 @@
               },
               "subViews": [
                 {
-                  "_type": "UMLNameCompartmentView",
-                  "_id": "DFDProc4_NameCompartment",
+                  "_type": "LabelView",
+                  "_id": "DFDProc4_NameLabel",
                   "_parent": {
                     "$ref": "DFDProc4_View"
                   },
-                  "model": {
-                    "$ref": "DFDProc4"
-                  },
-                  "subViews": [
-                    {
-                      "_type": "LabelView",
-                      "_id": "DFDProc4_NameLabel",
-                      "_parent": {
-                        "$ref": "DFDProc4_NameCompartment"
-                      },
-                      "text": "4. Secure Checkout",
-                      "font": "Arial;12;0",
-                      "left": 290,
-                      "top": 390,
-                      "width": 130,
-                      "height": 35,
-                      "visible": true
-                    }
-                  ],
+                  "text": "4. Secure Checkout",
                   "font": "Arial;13;0",
-                  "left": 285,
-                  "top": 385,
-                  "width": 140,
-                  "height": 45
+                  "left": 295,
+                  "top": 395,
+                  "width": 90,
+                  "height": 26,
+                  "visible": true
                 }
               ],
               "font": "Arial;13;0",
               "left": 280,
               "top": 380,
-              "width": 150,
+              "width": 120,
               "height": 55
             },
             {
-              "_type": "UMLUseCaseView",
+              "_type": "DFDProcessView",
               "_id": "DFDProc5_View",
               "_parent": {
                 "$ref": "DFDDiagramID"
@@ -1499,45 +1380,28 @@
               },
               "subViews": [
                 {
-                  "_type": "UMLNameCompartmentView",
-                  "_id": "DFDProc5_NameCompartment",
+                  "_type": "LabelView",
+                  "_id": "DFDProc5_NameLabel",
                   "_parent": {
                     "$ref": "DFDProc5_View"
                   },
-                  "model": {
-                    "$ref": "DFDProc5"
-                  },
-                  "subViews": [
-                    {
-                      "_type": "LabelView",
-                      "_id": "DFDProc5_NameLabel",
-                      "_parent": {
-                        "$ref": "DFDProc5_NameCompartment"
-                      },
-                      "text": "5. Verify Ledger Blocks",
-                      "font": "Arial;12;0",
-                      "left": 570,
-                      "top": 390,
-                      "width": 130,
-                      "height": 35,
-                      "visible": true
-                    }
-                  ],
+                  "text": "5. Verify Ledger Blocks",
                   "font": "Arial;13;0",
-                  "left": 565,
-                  "top": 385,
-                  "width": 140,
-                  "height": 45
+                  "left": 575,
+                  "top": 395,
+                  "width": 90,
+                  "height": 26,
+                  "visible": true
                 }
               ],
               "font": "Arial;13;0",
               "left": 560,
               "top": 380,
-              "width": 150,
+              "width": 120,
               "height": 55
             },
             {
-              "_type": "UMLUseCaseView",
+              "_type": "DFDDataStoreView",
               "_id": "DFDStoreUsers_View",
               "_parent": {
                 "$ref": "DFDDiagramID"
@@ -1547,45 +1411,28 @@
               },
               "subViews": [
                 {
-                  "_type": "UMLNameCompartmentView",
-                  "_id": "DFDStoreUsers_NameCompartment",
+                  "_type": "LabelView",
+                  "_id": "DFDStoreUsers_NameLabel",
                   "_parent": {
                     "$ref": "DFDStoreUsers_View"
                   },
-                  "model": {
-                    "$ref": "DFDStoreUsers"
-                  },
-                  "subViews": [
-                    {
-                      "_type": "LabelView",
-                      "_id": "DFDStoreUsers_NameLabel",
-                      "_parent": {
-                        "$ref": "DFDStoreUsers_NameCompartment"
-                      },
-                      "text": "D1 Users DB",
-                      "font": "Arial;12;0",
-                      "left": 190,
-                      "top": 510,
-                      "width": 110,
-                      "height": 26,
-                      "visible": true
-                    }
-                  ],
+                  "text": "D1 Users DB",
                   "font": "Arial;13;0",
-                  "left": 185,
-                  "top": 505,
-                  "width": 120,
-                  "height": 36
+                  "left": 195,
+                  "top": 512,
+                  "width": 80,
+                  "height": 13,
+                  "visible": true
                 }
               ],
               "font": "Arial;13;0",
               "left": 180,
               "top": 500,
-              "width": 130,
-              "height": 46
+              "width": 110,
+              "height": 38
             },
             {
-              "_type": "UMLUseCaseView",
+              "_type": "DFDDataStoreView",
               "_id": "DFDStoreVehicles_View",
               "_parent": {
                 "$ref": "DFDDiagramID"
@@ -1595,45 +1442,28 @@
               },
               "subViews": [
                 {
-                  "_type": "UMLNameCompartmentView",
-                  "_id": "DFDStoreVehicles_NameCompartment",
+                  "_type": "LabelView",
+                  "_id": "DFDStoreVehicles_NameLabel",
                   "_parent": {
                     "$ref": "DFDStoreVehicles_View"
                   },
-                  "model": {
-                    "$ref": "DFDStoreVehicles"
-                  },
-                  "subViews": [
-                    {
-                      "_type": "LabelView",
-                      "_id": "DFDStoreVehicles_NameLabel",
-                      "_parent": {
-                        "$ref": "DFDStoreVehicles_NameCompartment"
-                      },
-                      "text": "D2 Vehicles DB",
-                      "font": "Arial;12;0",
-                      "left": 350,
-                      "top": 510,
-                      "width": 110,
-                      "height": 26,
-                      "visible": true
-                    }
-                  ],
+                  "text": "D2 Vehicles DB",
                   "font": "Arial;13;0",
-                  "left": 345,
-                  "top": 505,
-                  "width": 120,
-                  "height": 36
+                  "left": 355,
+                  "top": 512,
+                  "width": 80,
+                  "height": 13,
+                  "visible": true
                 }
               ],
               "font": "Arial;13;0",
               "left": 340,
               "top": 500,
-              "width": 130,
-              "height": 46
+              "width": 110,
+              "height": 38
             },
             {
-              "_type": "UMLUseCaseView",
+              "_type": "DFDDataStoreView",
               "_id": "DFDStoreBookings_View",
               "_parent": {
                 "$ref": "DFDDiagramID"
@@ -1643,45 +1473,28 @@
               },
               "subViews": [
                 {
-                  "_type": "UMLNameCompartmentView",
-                  "_id": "DFDStoreBookings_NameCompartment",
+                  "_type": "LabelView",
+                  "_id": "DFDStoreBookings_NameLabel",
                   "_parent": {
                     "$ref": "DFDStoreBookings_View"
                   },
-                  "model": {
-                    "$ref": "DFDStoreBookings"
-                  },
-                  "subViews": [
-                    {
-                      "_type": "LabelView",
-                      "_id": "DFDStoreBookings_NameLabel",
-                      "_parent": {
-                        "$ref": "DFDStoreBookings_NameCompartment"
-                      },
-                      "text": "D3 Bookings DB",
-                      "font": "Arial;12;0",
-                      "left": 510,
-                      "top": 510,
-                      "width": 110,
-                      "height": 26,
-                      "visible": true
-                    }
-                  ],
+                  "text": "D3 Bookings DB",
                   "font": "Arial;13;0",
-                  "left": 505,
-                  "top": 505,
-                  "width": 120,
-                  "height": 36
+                  "left": 515,
+                  "top": 512,
+                  "width": 80,
+                  "height": 13,
+                  "visible": true
                 }
               ],
               "font": "Arial;13;0",
               "left": 500,
               "top": 500,
-              "width": 130,
-              "height": 46
+              "width": 110,
+              "height": 38
             },
             {
-              "_type": "UMLUseCaseView",
+              "_type": "DFDDataStoreView",
               "_id": "DFDStoreBlocks_View",
               "_parent": {
                 "$ref": "DFDDiagramID"
@@ -1691,45 +1504,28 @@
               },
               "subViews": [
                 {
-                  "_type": "UMLNameCompartmentView",
-                  "_id": "DFDStoreBlocks_NameCompartment",
+                  "_type": "LabelView",
+                  "_id": "DFDStoreBlocks_NameLabel",
                   "_parent": {
                     "$ref": "DFDStoreBlocks_View"
                   },
-                  "model": {
-                    "$ref": "DFDStoreBlocks"
-                  },
-                  "subViews": [
-                    {
-                      "_type": "LabelView",
-                      "_id": "DFDStoreBlocks_NameLabel",
-                      "_parent": {
-                        "$ref": "DFDStoreBlocks_NameCompartment"
-                      },
-                      "text": "D4 Blocks DB",
-                      "font": "Arial;12;0",
-                      "left": 670,
-                      "top": 510,
-                      "width": 110,
-                      "height": 26,
-                      "visible": true
-                    }
-                  ],
+                  "text": "D4 Blocks DB",
                   "font": "Arial;13;0",
-                  "left": 665,
-                  "top": 505,
-                  "width": 120,
-                  "height": 36
+                  "left": 675,
+                  "top": 512,
+                  "width": 80,
+                  "height": 13,
+                  "visible": true
                 }
               ],
               "font": "Arial;13;0",
               "left": 660,
               "top": 500,
-              "width": 130,
-              "height": 46
+              "width": 110,
+              "height": 38
             },
             {
-              "_type": "UMLAssociationView",
+              "_type": "DFDDataFlowView",
               "_id": "Flow_User_P1_View",
               "_parent": {
                 "$ref": "DFDDiagramID"
@@ -1755,7 +1551,7 @@
                   "model": {
                     "$ref": "Flow_User_P1"
                   },
-                  "text": "Login Details",
+                  "text": "Login details/Credentials",
                   "font": "Arial;11;0",
                   "left": 0,
                   "top": 0,
@@ -1766,7 +1562,7 @@
               ]
             },
             {
-              "_type": "UMLAssociationView",
+              "_type": "DFDDataFlowView",
               "_id": "Flow_P1_User_View",
               "_parent": {
                 "$ref": "DFDDiagramID"
@@ -1803,7 +1599,7 @@
               ]
             },
             {
-              "_type": "UMLAssociationView",
+              "_type": "DFDDataFlowView",
               "_id": "Flow_User_P2_View",
               "_parent": {
                 "$ref": "DFDDiagramID"
@@ -1829,7 +1625,7 @@
                   "model": {
                     "$ref": "Flow_User_P2"
                   },
-                  "text": "Listing Request",
+                  "text": "Listing request/Listing Details",
                   "font": "Arial;11;0",
                   "left": 0,
                   "top": 0,
@@ -1840,7 +1636,7 @@
               ]
             },
             {
-              "_type": "UMLAssociationView",
+              "_type": "DFDDataFlowView",
               "_id": "Flow_P2_User_View",
               "_parent": {
                 "$ref": "DFDDiagramID"
@@ -1877,7 +1673,7 @@
               ]
             },
             {
-              "_type": "UMLAssociationView",
+              "_type": "DFDDataFlowView",
               "_id": "Flow_User_P3_View",
               "_parent": {
                 "$ref": "DFDDiagramID"
@@ -1903,7 +1699,7 @@
                   "model": {
                     "$ref": "Flow_User_P3"
                   },
-                  "text": "Search Criteria",
+                  "text": "Search/Criteria/Search Criteria",
                   "font": "Arial;11;0",
                   "left": 0,
                   "top": 0,
@@ -1914,7 +1710,7 @@
               ]
             },
             {
-              "_type": "UMLAssociationView",
+              "_type": "DFDDataFlowView",
               "_id": "Flow_User_P4_View",
               "_parent": {
                 "$ref": "DFDDiagramID"
@@ -1940,7 +1736,7 @@
                   "model": {
                     "$ref": "Flow_User_P4"
                   },
-                  "text": "Payment Info",
+                  "text": "Payment Info/Booking Info",
                   "font": "Arial;11;0",
                   "left": 0,
                   "top": 0,
@@ -1951,7 +1747,7 @@
               ]
             },
             {
-              "_type": "UMLAssociationView",
+              "_type": "DFDDataFlowView",
               "_id": "Flow_P4_User_View",
               "_parent": {
                 "$ref": "DFDDiagramID"
@@ -1988,7 +1784,7 @@
               ]
             },
             {
-              "_type": "UMLAssociationView",
+              "_type": "DFDDataFlowView",
               "_id": "Flow_P1_Platform_View",
               "_parent": {
                 "$ref": "DFDDiagramID"
@@ -2014,7 +1810,7 @@
                   "model": {
                     "$ref": "Flow_P1_Platform"
                   },
-                  "text": "Admin Actions",
+                  "text": "Admin actions",
                   "font": "Arial;11;0",
                   "left": 0,
                   "top": 0,
@@ -2025,7 +1821,7 @@
               ]
             },
             {
-              "_type": "UMLAssociationView",
+              "_type": "DFDDataFlowView",
               "_id": "Flow_Platform_P1_View",
               "_parent": {
                 "$ref": "DFDDiagramID"
@@ -2051,7 +1847,7 @@
                   "model": {
                     "$ref": "Flow_Platform_P1"
                   },
-                  "text": "Audit Trails",
+                  "text": "Audit trails",
                   "font": "Arial;11;0",
                   "left": 0,
                   "top": 0,
@@ -2062,7 +1858,7 @@
               ]
             },
             {
-              "_type": "UMLAssociationView",
+              "_type": "DFDDataFlowView",
               "_id": "Flow_Platform_P2_View",
               "_parent": {
                 "$ref": "DFDDiagramID"
@@ -2099,7 +1895,7 @@
               ]
             },
             {
-              "_type": "UMLAssociationView",
+              "_type": "DFDDataFlowView",
               "_id": "Flow_Admin_Platform_View",
               "_parent": {
                 "$ref": "DFDDiagramID"
@@ -2136,7 +1932,7 @@
               ]
             },
             {
-              "_type": "UMLAssociationView",
+              "_type": "DFDDataFlowView",
               "_id": "Flow_P5_Admin_View",
               "_parent": {
                 "$ref": "DFDDiagramID"
@@ -2173,7 +1969,7 @@
               ]
             },
             {
-              "_type": "UMLAssociationView",
+              "_type": "DFDDataFlowView",
               "_id": "Flow_Admin_P5_View",
               "_parent": {
                 "$ref": "DFDDiagramID"
@@ -2210,7 +2006,7 @@
               ]
             },
             {
-              "_type": "UMLAssociationView",
+              "_type": "DFDDataFlowView",
               "_id": "Flow_P1_DB1_View",
               "_parent": {
                 "$ref": "DFDDiagramID"
@@ -2236,7 +2032,7 @@
                   "model": {
                     "$ref": "Flow_P1_DB1"
                   },
-                  "text": "User Profile",
+                  "text": "DB: User Profile",
                   "font": "Arial;11;0",
                   "left": 0,
                   "top": 0,
@@ -2247,7 +2043,7 @@
               ]
             },
             {
-              "_type": "UMLAssociationView",
+              "_type": "DFDDataFlowView",
               "_id": "Flow_P4_DB1_View",
               "_parent": {
                 "$ref": "DFDDiagramID"
@@ -2273,7 +2069,7 @@
                   "model": {
                     "$ref": "Flow_P4_DB1"
                   },
-                  "text": "User Profile",
+                  "text": "DB: User Profile",
                   "font": "Arial;11;0",
                   "left": 0,
                   "top": 0,
@@ -2284,7 +2080,7 @@
               ]
             },
             {
-              "_type": "UMLAssociationView",
+              "_type": "DFDDataFlowView",
               "_id": "Flow_P2_DB2_View",
               "_parent": {
                 "$ref": "DFDDiagramID"
@@ -2310,7 +2106,7 @@
                   "model": {
                     "$ref": "Flow_P2_DB2"
                   },
-                  "text": "Add Vehicle",
+                  "text": "Add vehicle/Manage listing",
                   "font": "Arial;11;0",
                   "left": 0,
                   "top": 0,
@@ -2321,7 +2117,7 @@
               ]
             },
             {
-              "_type": "UMLAssociationView",
+              "_type": "DFDDataFlowView",
               "_id": "Flow_P3_DB2_View",
               "_parent": {
                 "$ref": "DFDDiagramID"
@@ -2347,7 +2143,7 @@
                   "model": {
                     "$ref": "Flow_P3_DB2"
                   },
-                  "text": "Query Details",
+                  "text": "Query details/Update status",
                   "font": "Arial;11;0",
                   "left": 0,
                   "top": 0,
@@ -2358,7 +2154,7 @@
               ]
             },
             {
-              "_type": "UMLAssociationView",
+              "_type": "DFDDataFlowView",
               "_id": "Flow_P3_DB3_View",
               "_parent": {
                 "$ref": "DFDDiagramID"
@@ -2384,7 +2180,7 @@
                   "model": {
                     "$ref": "Flow_P3_DB3"
                   },
-                  "text": "Create Booking",
+                  "text": "Create booking",
                   "font": "Arial;11;0",
                   "left": 0,
                   "top": 0,
@@ -2395,7 +2191,7 @@
               ]
             },
             {
-              "_type": "UMLAssociationView",
+              "_type": "DFDDataFlowView",
               "_id": "Flow_P3_DB4_View",
               "_parent": {
                 "$ref": "DFDDiagramID"
@@ -2421,7 +2217,7 @@
                   "model": {
                     "$ref": "Flow_P3_DB4"
                   },
-                  "text": "Write Block",
+                  "text": "Write transaction block",
                   "font": "Arial;11;0",
                   "left": 0,
                   "top": 0,
@@ -2432,7 +2228,7 @@
               ]
             },
             {
-              "_type": "UMLAssociationView",
+              "_type": "DFDDataFlowView",
               "_id": "Flow_P5_DB4_View",
               "_parent": {
                 "$ref": "DFDDiagramID"
@@ -2458,7 +2254,7 @@
                   "model": {
                     "$ref": "Flow_P5_DB4"
                   },
-                  "text": "Validate Blocks",
+                  "text": "Validate blocks",
                   "font": "Arial;11;0",
                   "left": 0,
                   "top": 0,
@@ -2469,7 +2265,7 @@
               ]
             },
             {
-              "_type": "UMLAssociationView",
+              "_type": "DFDDataFlowView",
               "_id": "Flow_P5_DB3_View",
               "_parent": {
                 "$ref": "DFDDiagramID"
@@ -2495,7 +2291,7 @@
                   "model": {
                     "$ref": "Flow_P5_DB3"
                   },
-                  "text": "Update Booking",
+                  "text": "Update booking",
                   "font": "Arial;11;0",
                   "left": 0,
                   "top": 0,
@@ -2508,7 +2304,7 @@
           ]
         },
         {
-          "_type": "UMLActor",
+          "_type": "DFDExternalEntity",
           "_id": "DFDEntUserCustomer",
           "_parent": {
             "$ref": "DFDModelID"
@@ -2516,7 +2312,7 @@
           "name": "User Customer"
         },
         {
-          "_type": "UMLActor",
+          "_type": "DFDExternalEntity",
           "_id": "DFDEntAdmin",
           "_parent": {
             "$ref": "DFDModelID"
@@ -2524,7 +2320,7 @@
           "name": "Administrator Admin"
         },
         {
-          "_type": "UMLActor",
+          "_type": "DFDExternalEntity",
           "_id": "DFDEntPlatform",
           "_parent": {
             "$ref": "DFDModelID"
@@ -2532,7 +2328,7 @@
           "name": "GearUp Platform"
         },
         {
-          "_type": "UMLUseCase",
+          "_type": "DFDProcess",
           "_id": "DFDProc1",
           "_parent": {
             "$ref": "DFDModelID"
@@ -2540,7 +2336,7 @@
           "name": "1. Register & Login"
         },
         {
-          "_type": "UMLUseCase",
+          "_type": "DFDProcess",
           "_id": "DFDProc2",
           "_parent": {
             "$ref": "DFDModelID"
@@ -2548,7 +2344,7 @@
           "name": "2. Share/List Vehicle"
         },
         {
-          "_type": "UMLUseCase",
+          "_type": "DFDProcess",
           "_id": "DFDProc3",
           "_parent": {
             "$ref": "DFDModelID"
@@ -2556,7 +2352,7 @@
           "name": "3. Book Rental"
         },
         {
-          "_type": "UMLUseCase",
+          "_type": "DFDProcess",
           "_id": "DFDProc4",
           "_parent": {
             "$ref": "DFDModelID"
@@ -2564,7 +2360,7 @@
           "name": "4. Secure Checkout"
         },
         {
-          "_type": "UMLUseCase",
+          "_type": "DFDProcess",
           "_id": "DFDProc5",
           "_parent": {
             "$ref": "DFDModelID"
@@ -2572,7 +2368,7 @@
           "name": "5. Verify Ledger Blocks"
         },
         {
-          "_type": "UMLUseCase",
+          "_type": "DFDDataStore",
           "_id": "DFDStoreUsers",
           "_parent": {
             "$ref": "DFDModelID"
@@ -2580,7 +2376,7 @@
           "name": "D1 Users DB"
         },
         {
-          "_type": "UMLUseCase",
+          "_type": "DFDDataStore",
           "_id": "DFDStoreVehicles",
           "_parent": {
             "$ref": "DFDModelID"
@@ -2588,7 +2384,7 @@
           "name": "D2 Vehicles DB"
         },
         {
-          "_type": "UMLUseCase",
+          "_type": "DFDDataStore",
           "_id": "DFDStoreBookings",
           "_parent": {
             "$ref": "DFDModelID"
@@ -2596,7 +2392,7 @@
           "name": "D3 Bookings DB"
         },
         {
-          "_type": "UMLUseCase",
+          "_type": "DFDDataStore",
           "_id": "DFDStoreBlocks",
           "_parent": {
             "$ref": "DFDModelID"
@@ -2604,591 +2400,297 @@
           "name": "D4 Blocks DB"
         },
         {
-          "_type": "UMLAssociation",
+          "_type": "DFDDataFlow",
           "_id": "Flow_User_P1",
           "_parent": {
             "$ref": "DFDModelID"
           },
-          "name": "Login Details",
-          "end1": {
-            "_type": "UMLAssociationEnd",
-            "_id": "Flow_User_P1_End1",
-            "_parent": {
-              "$ref": "Flow_User_P1"
-            },
-            "reference": {
-              "$ref": "DFDEntUserCustomer"
-            }
+          "name": "Login details/Credentials",
+          "source": {
+            "$ref": "DFDEntUserCustomer"
           },
-          "end2": {
-            "_type": "UMLAssociationEnd",
-            "_id": "Flow_User_P1_End2",
-            "_parent": {
-              "$ref": "Flow_User_P1"
-            },
-            "reference": {
-              "$ref": "DFDProc1"
-            }
+          "target": {
+            "$ref": "DFDProc1"
           }
         },
         {
-          "_type": "UMLAssociation",
+          "_type": "DFDDataFlow",
           "_id": "Flow_P1_User",
           "_parent": {
             "$ref": "DFDModelID"
           },
           "name": "Verified User",
-          "end1": {
-            "_type": "UMLAssociationEnd",
-            "_id": "Flow_P1_User_End1",
-            "_parent": {
-              "$ref": "Flow_P1_User"
-            },
-            "reference": {
-              "$ref": "DFDProc1"
-            }
+          "source": {
+            "$ref": "DFDProc1"
           },
-          "end2": {
-            "_type": "UMLAssociationEnd",
-            "_id": "Flow_P1_User_End2",
-            "_parent": {
-              "$ref": "Flow_P1_User"
-            },
-            "reference": {
-              "$ref": "DFDEntUserCustomer"
-            }
+          "target": {
+            "$ref": "DFDEntUserCustomer"
           }
         },
         {
-          "_type": "UMLAssociation",
+          "_type": "DFDDataFlow",
           "_id": "Flow_User_P2",
           "_parent": {
             "$ref": "DFDModelID"
           },
-          "name": "Listing Request",
-          "end1": {
-            "_type": "UMLAssociationEnd",
-            "_id": "Flow_User_P2_End1",
-            "_parent": {
-              "$ref": "Flow_User_P2"
-            },
-            "reference": {
-              "$ref": "DFDEntUserCustomer"
-            }
+          "name": "Listing request/Listing Details",
+          "source": {
+            "$ref": "DFDEntUserCustomer"
           },
-          "end2": {
-            "_type": "UMLAssociationEnd",
-            "_id": "Flow_User_P2_End2",
-            "_parent": {
-              "$ref": "Flow_User_P2"
-            },
-            "reference": {
-              "$ref": "DFDProc2"
-            }
+          "target": {
+            "$ref": "DFDProc2"
           }
         },
         {
-          "_type": "UMLAssociation",
+          "_type": "DFDDataFlow",
           "_id": "Flow_P2_User",
           "_parent": {
             "$ref": "DFDModelID"
           },
           "name": "Vehicle Info",
-          "end1": {
-            "_type": "UMLAssociationEnd",
-            "_id": "Flow_P2_User_End1",
-            "_parent": {
-              "$ref": "Flow_P2_User"
-            },
-            "reference": {
-              "$ref": "DFDProc2"
-            }
+          "source": {
+            "$ref": "DFDProc2"
           },
-          "end2": {
-            "_type": "UMLAssociationEnd",
-            "_id": "Flow_P2_User_End2",
-            "_parent": {
-              "$ref": "Flow_P2_User"
-            },
-            "reference": {
-              "$ref": "DFDEntUserCustomer"
-            }
+          "target": {
+            "$ref": "DFDEntUserCustomer"
           }
         },
         {
-          "_type": "UMLAssociation",
+          "_type": "DFDDataFlow",
           "_id": "Flow_User_P3",
           "_parent": {
             "$ref": "DFDModelID"
           },
-          "name": "Search Criteria",
-          "end1": {
-            "_type": "UMLAssociationEnd",
-            "_id": "Flow_User_P3_End1",
-            "_parent": {
-              "$ref": "Flow_User_P3"
-            },
-            "reference": {
-              "$ref": "DFDEntUserCustomer"
-            }
+          "name": "Search/Criteria/Search Criteria",
+          "source": {
+            "$ref": "DFDEntUserCustomer"
           },
-          "end2": {
-            "_type": "UMLAssociationEnd",
-            "_id": "Flow_User_P3_End2",
-            "_parent": {
-              "$ref": "Flow_User_P3"
-            },
-            "reference": {
-              "$ref": "DFDProc3"
-            }
+          "target": {
+            "$ref": "DFDProc3"
           }
         },
         {
-          "_type": "UMLAssociation",
+          "_type": "DFDDataFlow",
           "_id": "Flow_User_P4",
           "_parent": {
             "$ref": "DFDModelID"
           },
-          "name": "Payment Info",
-          "end1": {
-            "_type": "UMLAssociationEnd",
-            "_id": "Flow_User_P4_End1",
-            "_parent": {
-              "$ref": "Flow_User_P4"
-            },
-            "reference": {
-              "$ref": "DFDEntUserCustomer"
-            }
+          "name": "Payment Info/Booking Info",
+          "source": {
+            "$ref": "DFDEntUserCustomer"
           },
-          "end2": {
-            "_type": "UMLAssociationEnd",
-            "_id": "Flow_User_P4_End2",
-            "_parent": {
-              "$ref": "Flow_User_P4"
-            },
-            "reference": {
-              "$ref": "DFDProc4"
-            }
+          "target": {
+            "$ref": "DFDProc4"
           }
         },
         {
-          "_type": "UMLAssociation",
+          "_type": "DFDDataFlow",
           "_id": "Flow_P4_User",
           "_parent": {
             "$ref": "DFDModelID"
           },
           "name": "Checkout Success",
-          "end1": {
-            "_type": "UMLAssociationEnd",
-            "_id": "Flow_P4_User_End1",
-            "_parent": {
-              "$ref": "Flow_P4_User"
-            },
-            "reference": {
-              "$ref": "DFDProc4"
-            }
+          "source": {
+            "$ref": "DFDProc4"
           },
-          "end2": {
-            "_type": "UMLAssociationEnd",
-            "_id": "Flow_P4_User_End2",
-            "_parent": {
-              "$ref": "Flow_P4_User"
-            },
-            "reference": {
-              "$ref": "DFDEntUserCustomer"
-            }
+          "target": {
+            "$ref": "DFDEntUserCustomer"
           }
         },
         {
-          "_type": "UMLAssociation",
+          "_type": "DFDDataFlow",
           "_id": "Flow_P1_Platform",
           "_parent": {
             "$ref": "DFDModelID"
           },
-          "name": "Admin Actions",
-          "end1": {
-            "_type": "UMLAssociationEnd",
-            "_id": "Flow_P1_Platform_End1",
-            "_parent": {
-              "$ref": "Flow_P1_Platform"
-            },
-            "reference": {
-              "$ref": "DFDProc1"
-            }
+          "name": "Admin actions",
+          "source": {
+            "$ref": "DFDProc1"
           },
-          "end2": {
-            "_type": "UMLAssociationEnd",
-            "_id": "Flow_P1_Platform_End2",
-            "_parent": {
-              "$ref": "Flow_P1_Platform"
-            },
-            "reference": {
-              "$ref": "DFDEntPlatform"
-            }
+          "target": {
+            "$ref": "DFDEntPlatform"
           }
         },
         {
-          "_type": "UMLAssociation",
+          "_type": "DFDDataFlow",
           "_id": "Flow_Platform_P1",
           "_parent": {
             "$ref": "DFDModelID"
           },
-          "name": "Audit Trails",
-          "end1": {
-            "_type": "UMLAssociationEnd",
-            "_id": "Flow_Platform_P1_End1",
-            "_parent": {
-              "$ref": "Flow_Platform_P1"
-            },
-            "reference": {
-              "$ref": "DFDEntPlatform"
-            }
+          "name": "Audit trails",
+          "source": {
+            "$ref": "DFDEntPlatform"
           },
-          "end2": {
-            "_type": "UMLAssociationEnd",
-            "_id": "Flow_Platform_P1_End2",
-            "_parent": {
-              "$ref": "Flow_Platform_P1"
-            },
-            "reference": {
-              "$ref": "DFDProc1"
-            }
+          "target": {
+            "$ref": "DFDProc1"
           }
         },
         {
-          "_type": "UMLAssociation",
+          "_type": "DFDDataFlow",
           "_id": "Flow_Platform_P2",
           "_parent": {
             "$ref": "DFDModelID"
           },
           "name": "Management",
-          "end1": {
-            "_type": "UMLAssociationEnd",
-            "_id": "Flow_Platform_P2_End1",
-            "_parent": {
-              "$ref": "Flow_Platform_P2"
-            },
-            "reference": {
-              "$ref": "DFDEntPlatform"
-            }
+          "source": {
+            "$ref": "DFDEntPlatform"
           },
-          "end2": {
-            "_type": "UMLAssociationEnd",
-            "_id": "Flow_Platform_P2_End2",
-            "_parent": {
-              "$ref": "Flow_Platform_P2"
-            },
-            "reference": {
-              "$ref": "DFDProc2"
-            }
+          "target": {
+            "$ref": "DFDProc2"
           }
         },
         {
-          "_type": "UMLAssociation",
+          "_type": "DFDDataFlow",
           "_id": "Flow_Admin_Platform",
           "_parent": {
             "$ref": "DFDModelID"
           },
           "name": "Monitor Request",
-          "end1": {
-            "_type": "UMLAssociationEnd",
-            "_id": "Flow_Admin_Platform_End1",
-            "_parent": {
-              "$ref": "Flow_Admin_Platform"
-            },
-            "reference": {
-              "$ref": "DFDEntAdmin"
-            }
+          "source": {
+            "$ref": "DFDEntAdmin"
           },
-          "end2": {
-            "_type": "UMLAssociationEnd",
-            "_id": "Flow_Admin_Platform_End2",
-            "_parent": {
-              "$ref": "Flow_Admin_Platform"
-            },
-            "reference": {
-              "$ref": "DFDEntPlatform"
-            }
+          "target": {
+            "$ref": "DFDEntPlatform"
           }
         },
         {
-          "_type": "UMLAssociation",
+          "_type": "DFDDataFlow",
           "_id": "Flow_P5_Admin",
           "_parent": {
             "$ref": "DFDModelID"
           },
           "name": "Process Confirmed",
-          "end1": {
-            "_type": "UMLAssociationEnd",
-            "_id": "Flow_P5_Admin_End1",
-            "_parent": {
-              "$ref": "Flow_P5_Admin"
-            },
-            "reference": {
-              "$ref": "DFDProc5"
-            }
+          "source": {
+            "$ref": "DFDProc5"
           },
-          "end2": {
-            "_type": "UMLAssociationEnd",
-            "_id": "Flow_P5_Admin_End2",
-            "_parent": {
-              "$ref": "Flow_P5_Admin"
-            },
-            "reference": {
-              "$ref": "DFDEntAdmin"
-            }
+          "target": {
+            "$ref": "DFDEntAdmin"
           }
         },
         {
-          "_type": "UMLAssociation",
+          "_type": "DFDDataFlow",
           "_id": "Flow_Admin_P5",
           "_parent": {
             "$ref": "DFDModelID"
           },
           "name": "Audit Ledger",
-          "end1": {
-            "_type": "UMLAssociationEnd",
-            "_id": "Flow_Admin_P5_End1",
-            "_parent": {
-              "$ref": "Flow_Admin_P5"
-            },
-            "reference": {
-              "$ref": "DFDEntAdmin"
-            }
+          "source": {
+            "$ref": "DFDEntAdmin"
           },
-          "end2": {
-            "_type": "UMLAssociationEnd",
-            "_id": "Flow_Admin_P5_End2",
-            "_parent": {
-              "$ref": "Flow_Admin_P5"
-            },
-            "reference": {
-              "$ref": "DFDProc5"
-            }
+          "target": {
+            "$ref": "DFDProc5"
           }
         },
         {
-          "_type": "UMLAssociation",
+          "_type": "DFDDataFlow",
           "_id": "Flow_P1_DB1",
           "_parent": {
             "$ref": "DFDModelID"
           },
-          "name": "User Profile",
-          "end1": {
-            "_type": "UMLAssociationEnd",
-            "_id": "Flow_P1_DB1_End1",
-            "_parent": {
-              "$ref": "Flow_P1_DB1"
-            },
-            "reference": {
-              "$ref": "DFDProc1"
-            }
+          "name": "DB: User Profile",
+          "source": {
+            "$ref": "DFDProc1"
           },
-          "end2": {
-            "_type": "UMLAssociationEnd",
-            "_id": "Flow_P1_DB1_End2",
-            "_parent": {
-              "$ref": "Flow_P1_DB1"
-            },
-            "reference": {
-              "$ref": "DFDStoreUsers"
-            }
+          "target": {
+            "$ref": "DFDStoreUsers"
           }
         },
         {
-          "_type": "UMLAssociation",
+          "_type": "DFDDataFlow",
           "_id": "Flow_P4_DB1",
           "_parent": {
             "$ref": "DFDModelID"
           },
-          "name": "User Profile",
-          "end1": {
-            "_type": "UMLAssociationEnd",
-            "_id": "Flow_P4_DB1_End1",
-            "_parent": {
-              "$ref": "Flow_P4_DB1"
-            },
-            "reference": {
-              "$ref": "DFDProc4"
-            }
+          "name": "DB: User Profile",
+          "source": {
+            "$ref": "DFDProc4"
           },
-          "end2": {
-            "_type": "UMLAssociationEnd",
-            "_id": "Flow_P4_DB1_End2",
-            "_parent": {
-              "$ref": "Flow_P4_DB1"
-            },
-            "reference": {
-              "$ref": "DFDStoreUsers"
-            }
+          "target": {
+            "$ref": "DFDStoreUsers"
           }
         },
         {
-          "_type": "UMLAssociation",
+          "_type": "DFDDataFlow",
           "_id": "Flow_P2_DB2",
           "_parent": {
             "$ref": "DFDModelID"
           },
-          "name": "Add Vehicle",
-          "end1": {
-            "_type": "UMLAssociationEnd",
-            "_id": "Flow_P2_DB2_End1",
-            "_parent": {
-              "$ref": "Flow_P2_DB2"
-            },
-            "reference": {
-              "$ref": "DFDProc2"
-            }
+          "name": "Add vehicle/Manage listing",
+          "source": {
+            "$ref": "DFDProc2"
           },
-          "end2": {
-            "_type": "UMLAssociationEnd",
-            "_id": "Flow_P2_DB2_End2",
-            "_parent": {
-              "$ref": "Flow_P2_DB2"
-            },
-            "reference": {
-              "$ref": "DFDStoreVehicles"
-            }
+          "target": {
+            "$ref": "DFDStoreVehicles"
           }
         },
         {
-          "_type": "UMLAssociation",
+          "_type": "DFDDataFlow",
           "_id": "Flow_P3_DB2",
           "_parent": {
             "$ref": "DFDModelID"
           },
-          "name": "Query Details",
-          "end1": {
-            "_type": "UMLAssociationEnd",
-            "_id": "Flow_P3_DB2_End1",
-            "_parent": {
-              "$ref": "Flow_P3_DB2"
-            },
-            "reference": {
-              "$ref": "DFDProc3"
-            }
+          "name": "Query details/Update status",
+          "source": {
+            "$ref": "DFDProc3"
           },
-          "end2": {
-            "_type": "UMLAssociationEnd",
-            "_id": "Flow_P3_DB2_End2",
-            "_parent": {
-              "$ref": "Flow_P3_DB2"
-            },
-            "reference": {
-              "$ref": "DFDStoreVehicles"
-            }
+          "target": {
+            "$ref": "DFDStoreVehicles"
           }
         },
         {
-          "_type": "UMLAssociation",
+          "_type": "DFDDataFlow",
           "_id": "Flow_P3_DB3",
           "_parent": {
             "$ref": "DFDModelID"
           },
-          "name": "Create Booking",
-          "end1": {
-            "_type": "UMLAssociationEnd",
-            "_id": "Flow_P3_DB3_End1",
-            "_parent": {
-              "$ref": "Flow_P3_DB3"
-            },
-            "reference": {
-              "$ref": "DFDProc3"
-            }
+          "name": "Create booking",
+          "source": {
+            "$ref": "DFDProc3"
           },
-          "end2": {
-            "_type": "UMLAssociationEnd",
-            "_id": "Flow_P3_DB3_End2",
-            "_parent": {
-              "$ref": "Flow_P3_DB3"
-            },
-            "reference": {
-              "$ref": "DFDStoreBookings"
-            }
+          "target": {
+            "$ref": "DFDStoreBookings"
           }
         },
         {
-          "_type": "UMLAssociation",
+          "_type": "DFDDataFlow",
           "_id": "Flow_P3_DB4",
           "_parent": {
             "$ref": "DFDModelID"
           },
-          "name": "Write Block",
-          "end1": {
-            "_type": "UMLAssociationEnd",
-            "_id": "Flow_P3_DB4_End1",
-            "_parent": {
-              "$ref": "Flow_P3_DB4"
-            },
-            "reference": {
-              "$ref": "DFDProc3"
-            }
+          "name": "Write transaction block",
+          "source": {
+            "$ref": "DFDProc3"
           },
-          "end2": {
-            "_type": "UMLAssociationEnd",
-            "_id": "Flow_P3_DB4_End2",
-            "_parent": {
-              "$ref": "Flow_P3_DB4"
-            },
-            "reference": {
-              "$ref": "DFDStoreBlocks"
-            }
+          "target": {
+            "$ref": "DFDStoreBlocks"
           }
         },
         {
-          "_type": "UMLAssociation",
+          "_type": "DFDDataFlow",
           "_id": "Flow_P5_DB4",
           "_parent": {
             "$ref": "DFDModelID"
           },
-          "name": "Validate Blocks",
-          "end1": {
-            "_type": "UMLAssociationEnd",
-            "_id": "Flow_P5_DB4_End1",
-            "_parent": {
-              "$ref": "Flow_P5_DB4"
-            },
-            "reference": {
-              "$ref": "DFDProc5"
-            }
+          "name": "Validate blocks",
+          "source": {
+            "$ref": "DFDProc5"
           },
-          "end2": {
-            "_type": "UMLAssociationEnd",
-            "_id": "Flow_P5_DB4_End2",
-            "_parent": {
-              "$ref": "Flow_P5_DB4"
-            },
-            "reference": {
-              "$ref": "DFDStoreBlocks"
-            }
+          "target": {
+            "$ref": "DFDStoreBlocks"
           }
         },
         {
-          "_type": "UMLAssociation",
+          "_type": "DFDDataFlow",
           "_id": "Flow_P5_DB3",
           "_parent": {
             "$ref": "DFDModelID"
           },
-          "name": "Update Booking",
-          "end1": {
-            "_type": "UMLAssociationEnd",
-            "_id": "Flow_P5_DB3_End1",
-            "_parent": {
-              "$ref": "Flow_P5_DB3"
-            },
-            "reference": {
-              "$ref": "DFDProc5"
-            }
+          "name": "Update booking",
+          "source": {
+            "$ref": "DFDProc5"
           },
-          "end2": {
-            "_type": "UMLAssociationEnd",
-            "_id": "Flow_P5_DB3_End2",
-            "_parent": {
-              "$ref": "Flow_P5_DB3"
-            },
-            "reference": {
-              "$ref": "DFDStoreBookings"
-            }
+          "target": {
+            "$ref": "DFDStoreBookings"
           }
         }
       ]
