@@ -137,6 +137,49 @@ The system is designed with a highly responsive, clean user dashboard. Users onl
 
 ### 5.1 Data Flow Diagram (DFD)
 
+#### Level 1 DFD – Process Flow Diagram
+```mermaid
+graph TD
+    User([User / Rider])
+    Admin([Admin])
+    
+    subgraph Processes
+        P1(1. Signup / Login)
+        P2(2. List Vehicle)
+        P3(3. Book Rental)
+        P4(4. Process Payment)
+        P5(5. Verify Ledger)
+    end
+    
+    subgraph Data Stores
+        DS1[(Users Collection)]
+        DS2[(Vehicles Collection)]
+        DS3[(Bookings Collection)]
+        DS4[(Blocks Collection)]
+    end
+    
+    User -->|Credentials| P1
+    P1 -->|Save User| DS1
+    P1 -->|JWT Token| User
+    
+    User -->|Specs & Uploads| P2
+    P2 -->|Create Listing| DS2
+    
+    User -->|Dates & Location| P3
+    P3 -->|Read Vehicles| DS2
+    P3 -->|Calc Cost| User
+    
+    User -->|Payment Info| P4
+    P4 -->|Create Booking & Block Data| DS3
+    P4 -->|Append Block| P5
+    
+    P5 -->|Mine Proof of Work| DS4
+    
+    Admin -->|Trigger Audit| P5
+    P5 -->|Read Hash Chain| DS4
+    P5 -->|Validity Status| Admin
+```
+
 #### Level 1 DFD – Student (User) Processes
 
 | Process | Input Data | Target Data Store | Process Description |
@@ -158,16 +201,82 @@ The system is designed with a highly responsive, clean user dashboard. Users onl
 
 ---
 
-### 5.2 Use Case Diagram Description
-* **Actors**:
-  * **User (Rider)**: Registers, logs in, registers vehicles, browses rental vehicles, books rentals, and audits the transaction ledger.
-  * **Admin**: Monitors app metrics, manages user listings, cancels bookings, and runs cryptographic audits.
-* **Use Cases**:
-  * **Login/Signup**: Standard email validation and registration.
-  * **Share Vehicle**: Add specs and image.
-  * **Book Vehicle**: Select dates, select location, view pickup map.
-  * **Process Secure Payment**: Checkout on separate `/payment` component.
-  * **Audit Ledger**: Re-calculate blockchain hashes.
+### 5.2 Use Case Diagram
+
+```mermaid
+graph LR
+    subgraph System Boundary: GearUp Secure
+        UC1(Register/Signup)
+        UC2(Login/Logout)
+        UC3(Share/List Vehicle)
+        UC4(View & Browse Vehicles)
+        UC5(Book Rental & Select Shop)
+        UC6(Secure Payment Checkout)
+        UC7(Audit Transaction Ledger)
+        UC8(Approve/Review Vehicle Listings)
+        UC9(Manage User Accounts)
+    end
+    
+    Rider([User/Rider]) --> UC1
+    Rider --> UC2
+    Rider --> UC3
+    Rider --> UC4
+    Rider --> UC5
+    Rider --> UC6
+    Rider --> UC7
+    
+    Admin([Administrator]) --> UC2
+    Admin --> UC7
+    Admin --> UC8
+    Admin --> UC9
+```
+
+### 5.3 Entity Relationship (ER) Diagram
+
+```mermaid
+erDiagram
+    USER {
+        string id PK
+        string name
+        string email
+        string phone
+        string password
+        string role
+        boolean isActive
+    }
+    VEHICLE {
+        string id PK
+        string ownerId FK
+        string vehicleName
+        string vehicleType
+        string fuelType
+        number rentPrice
+        boolean isApproved
+    }
+    BOOKING {
+        string id PK
+        string vehicleId FK
+        string userId FK
+        date fromDate
+        date toDate
+        string location
+        number totalAmount
+        string paymentStatus
+    }
+    BLOCK {
+        number index PK
+        number timestamp
+        json data
+        string previousHash
+        string hash
+        number nonce
+    }
+    
+    USER ||--o{ VEHICLE : owns
+    USER ||--o{ BOOKING : makes
+    VEHICLE ||--o{ BOOKING : booked_for
+    BOOKING ||--|| BLOCK : recorded_in
+```
 
 ---
 
