@@ -62,5 +62,6 @@ const bookingSchema = new mongoose.Schema({
   timestamps: true
 });
 
-const Booking = mongoose.model('Booking', bookingSchema);
+import { getModel } from './dbSelector.js';
+const Booking = getModel('Booking', bookingSchema);
 export default Booking;

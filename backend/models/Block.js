@@ -30,5 +30,6 @@ const blockSchema = new mongoose.Schema({
   timestamps: true
 });
 
-const Block = mongoose.model('Block', blockSchema);
+import { getModel } from './dbSelector.js';
+const Block = getModel('Block', blockSchema);
 export default Block;

@@ -5,6 +5,7 @@ import helmet from 'helmet';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import dotenv from 'dotenv';
+import { connectDb } from './models/dbSelector.js';
 
 // Import Middlewares
 import { apiLimiter, sanitizeInput } from './middleware/security.js';
@@ -73,11 +74,8 @@ app.use(sanitizeInput);
 // Static uploads serving (serves vehicle image files securely)
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
-// Connect to MongoDB
-mongoose
-  .connect(process.env.MONGODB_URI)
-  .then(() => console.log('Connected to MongoDB database.'))
-  .catch((err) => console.error('MongoDB database connection failed:', err));
+// Connect to MongoDB (with automatic local file-based database fallback)
+connectDb(process.env.MONGODB_URI);
 
 // Mount REST Controllers
 app.use('/api/auth', authRoutes);

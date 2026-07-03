@@ -34,5 +34,6 @@ const helplineSchema = new mongoose.Schema({
   timestamps: true
 });
 
-const Helpline = mongoose.model('Helpline', helplineSchema);
+import { getModel } from './dbSelector.js';
+const Helpline = getModel('Helpline', helplineSchema);
 export default Helpline;

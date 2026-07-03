@@ -102,5 +102,6 @@ const vehicleSchema = new mongoose.Schema({
   timestamps: true
 });
 
-const Vehicle = mongoose.model('Vehicle', vehicleSchema);
+import { getModel } from './dbSelector.js';
+const Vehicle = getModel('Vehicle', vehicleSchema);
 export default Vehicle;
