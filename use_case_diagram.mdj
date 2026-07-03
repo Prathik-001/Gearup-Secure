@@ -2694,6 +2694,1054 @@
           }
         }
       ]
+    },
+    {
+      "_type": "ERDDataModel",
+      "_id": "ERDModelID",
+      "_parent": {
+        "$ref": "GearUpProjectID"
+      },
+      "name": "Entity Relationship Model",
+      "ownedElements": [
+        {
+          "_type": "ERDDiagram",
+          "_id": "ERDDiagramID",
+          "_parent": {
+            "$ref": "ERDModelID"
+          },
+          "name": "Entity Relationship (ER) Diagram",
+          "visible": true,
+          "ownedViews": [
+            {
+              "_type": "ERDEntityView",
+              "_id": "ERDEntUser_View",
+              "_parent": {
+                "$ref": "ERDDiagramID"
+              },
+              "model": {
+                "$ref": "ERDEntUser"
+              },
+              "subViews": [
+                {
+                  "_type": "LabelView",
+                  "_id": "ERDEntUser_NameLabel",
+                  "_parent": {
+                    "$ref": "ERDEntUser_View"
+                  },
+                  "text": "USER",
+                  "font": "Arial;13;1",
+                  "left": 80,
+                  "top": 85,
+                  "width": 180,
+                  "height": 18,
+                  "visible": true
+                },
+                {
+                  "_type": "ERDColumnView",
+                  "_id": "col_user_id_View",
+                  "_parent": {
+                    "$ref": "ERDEntUser_View"
+                  },
+                  "model": {
+                    "$ref": "col_user_id"
+                  },
+                  "font": "Arial;13;0",
+                  "left": 85,
+                  "top": 110,
+                  "width": 170,
+                  "height": 16
+                },
+                {
+                  "_type": "ERDColumnView",
+                  "_id": "col_user_name_View",
+                  "_parent": {
+                    "$ref": "ERDEntUser_View"
+                  },
+                  "model": {
+                    "$ref": "col_user_name"
+                  },
+                  "font": "Arial;13;0",
+                  "left": 85,
+                  "top": 126,
+                  "width": 170,
+                  "height": 16
+                },
+                {
+                  "_type": "ERDColumnView",
+                  "_id": "col_user_email_View",
+                  "_parent": {
+                    "$ref": "ERDEntUser_View"
+                  },
+                  "model": {
+                    "$ref": "col_user_email"
+                  },
+                  "font": "Arial;13;0",
+                  "left": 85,
+                  "top": 142,
+                  "width": 170,
+                  "height": 16
+                },
+                {
+                  "_type": "ERDColumnView",
+                  "_id": "col_user_phone_View",
+                  "_parent": {
+                    "$ref": "ERDEntUser_View"
+                  },
+                  "model": {
+                    "$ref": "col_user_phone"
+                  },
+                  "font": "Arial;13;0",
+                  "left": 85,
+                  "top": 158,
+                  "width": 170,
+                  "height": 16
+                },
+                {
+                  "_type": "ERDColumnView",
+                  "_id": "col_user_password_View",
+                  "_parent": {
+                    "$ref": "ERDEntUser_View"
+                  },
+                  "model": {
+                    "$ref": "col_user_password"
+                  },
+                  "font": "Arial;13;0",
+                  "left": 85,
+                  "top": 174,
+                  "width": 170,
+                  "height": 16
+                },
+                {
+                  "_type": "ERDColumnView",
+                  "_id": "col_user_role_View",
+                  "_parent": {
+                    "$ref": "ERDEntUser_View"
+                  },
+                  "model": {
+                    "$ref": "col_user_role"
+                  },
+                  "font": "Arial;13;0",
+                  "left": 85,
+                  "top": 190,
+                  "width": 170,
+                  "height": 16
+                },
+                {
+                  "_type": "ERDColumnView",
+                  "_id": "col_user_isActive_View",
+                  "_parent": {
+                    "$ref": "ERDEntUser_View"
+                  },
+                  "model": {
+                    "$ref": "col_user_isActive"
+                  },
+                  "font": "Arial;13;0",
+                  "left": 85,
+                  "top": 206,
+                  "width": 170,
+                  "height": 16
+                }
+              ],
+              "font": "Arial;13;0",
+              "left": 80,
+              "top": 80,
+              "width": 180,
+              "height": 160
+            },
+            {
+              "_type": "ERDEntityView",
+              "_id": "ERDEntVehicle_View",
+              "_parent": {
+                "$ref": "ERDDiagramID"
+              },
+              "model": {
+                "$ref": "ERDEntVehicle"
+              },
+              "subViews": [
+                {
+                  "_type": "LabelView",
+                  "_id": "ERDEntVehicle_NameLabel",
+                  "_parent": {
+                    "$ref": "ERDEntVehicle_View"
+                  },
+                  "text": "VEHICLE",
+                  "font": "Arial;13;1",
+                  "left": 380,
+                  "top": 85,
+                  "width": 180,
+                  "height": 18,
+                  "visible": true
+                },
+                {
+                  "_type": "ERDColumnView",
+                  "_id": "col_vehicle_id_View",
+                  "_parent": {
+                    "$ref": "ERDEntVehicle_View"
+                  },
+                  "model": {
+                    "$ref": "col_vehicle_id"
+                  },
+                  "font": "Arial;13;0",
+                  "left": 385,
+                  "top": 110,
+                  "width": 170,
+                  "height": 16
+                },
+                {
+                  "_type": "ERDColumnView",
+                  "_id": "col_vehicle_ownerId_View",
+                  "_parent": {
+                    "$ref": "ERDEntVehicle_View"
+                  },
+                  "model": {
+                    "$ref": "col_vehicle_ownerId"
+                  },
+                  "font": "Arial;13;0",
+                  "left": 385,
+                  "top": 126,
+                  "width": 170,
+                  "height": 16
+                },
+                {
+                  "_type": "ERDColumnView",
+                  "_id": "col_vehicle_name_View",
+                  "_parent": {
+                    "$ref": "ERDEntVehicle_View"
+                  },
+                  "model": {
+                    "$ref": "col_vehicle_name"
+                  },
+                  "font": "Arial;13;0",
+                  "left": 385,
+                  "top": 142,
+                  "width": 170,
+                  "height": 16
+                },
+                {
+                  "_type": "ERDColumnView",
+                  "_id": "col_vehicle_type_View",
+                  "_parent": {
+                    "$ref": "ERDEntVehicle_View"
+                  },
+                  "model": {
+                    "$ref": "col_vehicle_type"
+                  },
+                  "font": "Arial;13;0",
+                  "left": 385,
+                  "top": 158,
+                  "width": 170,
+                  "height": 16
+                },
+                {
+                  "_type": "ERDColumnView",
+                  "_id": "col_vehicle_fuel_View",
+                  "_parent": {
+                    "$ref": "ERDEntVehicle_View"
+                  },
+                  "model": {
+                    "$ref": "col_vehicle_fuel"
+                  },
+                  "font": "Arial;13;0",
+                  "left": 385,
+                  "top": 174,
+                  "width": 170,
+                  "height": 16
+                },
+                {
+                  "_type": "ERDColumnView",
+                  "_id": "col_vehicle_price_View",
+                  "_parent": {
+                    "$ref": "ERDEntVehicle_View"
+                  },
+                  "model": {
+                    "$ref": "col_vehicle_price"
+                  },
+                  "font": "Arial;13;0",
+                  "left": 385,
+                  "top": 190,
+                  "width": 170,
+                  "height": 16
+                },
+                {
+                  "_type": "ERDColumnView",
+                  "_id": "col_vehicle_approved_View",
+                  "_parent": {
+                    "$ref": "ERDEntVehicle_View"
+                  },
+                  "model": {
+                    "$ref": "col_vehicle_approved"
+                  },
+                  "font": "Arial;13;0",
+                  "left": 385,
+                  "top": 206,
+                  "width": 170,
+                  "height": 16
+                }
+              ],
+              "font": "Arial;13;0",
+              "left": 380,
+              "top": 80,
+              "width": 180,
+              "height": 160
+            },
+            {
+              "_type": "ERDEntityView",
+              "_id": "ERDEntBooking_View",
+              "_parent": {
+                "$ref": "ERDDiagramID"
+              },
+              "model": {
+                "$ref": "ERDEntBooking"
+              },
+              "subViews": [
+                {
+                  "_type": "LabelView",
+                  "_id": "ERDEntBooking_NameLabel",
+                  "_parent": {
+                    "$ref": "ERDEntBooking_View"
+                  },
+                  "text": "BOOKING",
+                  "font": "Arial;13;1",
+                  "left": 230,
+                  "top": 325,
+                  "width": 190,
+                  "height": 18,
+                  "visible": true
+                },
+                {
+                  "_type": "ERDColumnView",
+                  "_id": "col_booking_id_View",
+                  "_parent": {
+                    "$ref": "ERDEntBooking_View"
+                  },
+                  "model": {
+                    "$ref": "col_booking_id"
+                  },
+                  "font": "Arial;13;0",
+                  "left": 235,
+                  "top": 350,
+                  "width": 180,
+                  "height": 16
+                },
+                {
+                  "_type": "ERDColumnView",
+                  "_id": "col_booking_vehicleId_View",
+                  "_parent": {
+                    "$ref": "ERDEntBooking_View"
+                  },
+                  "model": {
+                    "$ref": "col_booking_vehicleId"
+                  },
+                  "font": "Arial;13;0",
+                  "left": 235,
+                  "top": 366,
+                  "width": 180,
+                  "height": 16
+                },
+                {
+                  "_type": "ERDColumnView",
+                  "_id": "col_booking_userId_View",
+                  "_parent": {
+                    "$ref": "ERDEntBooking_View"
+                  },
+                  "model": {
+                    "$ref": "col_booking_userId"
+                  },
+                  "font": "Arial;13;0",
+                  "left": 235,
+                  "top": 382,
+                  "width": 180,
+                  "height": 16
+                },
+                {
+                  "_type": "ERDColumnView",
+                  "_id": "col_booking_from_View",
+                  "_parent": {
+                    "$ref": "ERDEntBooking_View"
+                  },
+                  "model": {
+                    "$ref": "col_booking_from"
+                  },
+                  "font": "Arial;13;0",
+                  "left": 235,
+                  "top": 398,
+                  "width": 180,
+                  "height": 16
+                },
+                {
+                  "_type": "ERDColumnView",
+                  "_id": "col_booking_to_View",
+                  "_parent": {
+                    "$ref": "ERDEntBooking_View"
+                  },
+                  "model": {
+                    "$ref": "col_booking_to"
+                  },
+                  "font": "Arial;13;0",
+                  "left": 235,
+                  "top": 414,
+                  "width": 180,
+                  "height": 16
+                },
+                {
+                  "_type": "ERDColumnView",
+                  "_id": "col_booking_location_View",
+                  "_parent": {
+                    "$ref": "ERDEntBooking_View"
+                  },
+                  "model": {
+                    "$ref": "col_booking_location"
+                  },
+                  "font": "Arial;13;0",
+                  "left": 235,
+                  "top": 430,
+                  "width": 180,
+                  "height": 16
+                },
+                {
+                  "_type": "ERDColumnView",
+                  "_id": "col_booking_amount_View",
+                  "_parent": {
+                    "$ref": "ERDEntBooking_View"
+                  },
+                  "model": {
+                    "$ref": "col_booking_amount"
+                  },
+                  "font": "Arial;13;0",
+                  "left": 235,
+                  "top": 446,
+                  "width": 180,
+                  "height": 16
+                },
+                {
+                  "_type": "ERDColumnView",
+                  "_id": "col_booking_status_View",
+                  "_parent": {
+                    "$ref": "ERDEntBooking_View"
+                  },
+                  "model": {
+                    "$ref": "col_booking_status"
+                  },
+                  "font": "Arial;13;0",
+                  "left": 235,
+                  "top": 462,
+                  "width": 180,
+                  "height": 16
+                }
+              ],
+              "font": "Arial;13;0",
+              "left": 230,
+              "top": 320,
+              "width": 190,
+              "height": 180
+            },
+            {
+              "_type": "ERDEntityView",
+              "_id": "ERDEntBlock_View",
+              "_parent": {
+                "$ref": "ERDDiagramID"
+              },
+              "model": {
+                "$ref": "ERDEntBlock"
+              },
+              "subViews": [
+                {
+                  "_type": "LabelView",
+                  "_id": "ERDEntBlock_NameLabel",
+                  "_parent": {
+                    "$ref": "ERDEntBlock_View"
+                  },
+                  "text": "BLOCK",
+                  "font": "Arial;13;1",
+                  "left": 560,
+                  "top": 325,
+                  "width": 190,
+                  "height": 18,
+                  "visible": true
+                },
+                {
+                  "_type": "ERDColumnView",
+                  "_id": "col_block_index_View",
+                  "_parent": {
+                    "$ref": "ERDEntBlock_View"
+                  },
+                  "model": {
+                    "$ref": "col_block_index"
+                  },
+                  "font": "Arial;13;0",
+                  "left": 565,
+                  "top": 350,
+                  "width": 180,
+                  "height": 16
+                },
+                {
+                  "_type": "ERDColumnView",
+                  "_id": "col_block_time_View",
+                  "_parent": {
+                    "$ref": "ERDEntBlock_View"
+                  },
+                  "model": {
+                    "$ref": "col_block_time"
+                  },
+                  "font": "Arial;13;0",
+                  "left": 565,
+                  "top": 366,
+                  "width": 180,
+                  "height": 16
+                },
+                {
+                  "_type": "ERDColumnView",
+                  "_id": "col_block_data_View",
+                  "_parent": {
+                    "$ref": "ERDEntBlock_View"
+                  },
+                  "model": {
+                    "$ref": "col_block_data"
+                  },
+                  "font": "Arial;13;0",
+                  "left": 565,
+                  "top": 382,
+                  "width": 180,
+                  "height": 16
+                },
+                {
+                  "_type": "ERDColumnView",
+                  "_id": "col_block_prev_View",
+                  "_parent": {
+                    "$ref": "ERDEntBlock_View"
+                  },
+                  "model": {
+                    "$ref": "col_block_prev"
+                  },
+                  "font": "Arial;13;0",
+                  "left": 565,
+                  "top": 398,
+                  "width": 180,
+                  "height": 16
+                },
+                {
+                  "_type": "ERDColumnView",
+                  "_id": "col_block_hash_View",
+                  "_parent": {
+                    "$ref": "ERDEntBlock_View"
+                  },
+                  "model": {
+                    "$ref": "col_block_hash"
+                  },
+                  "font": "Arial;13;0",
+                  "left": 565,
+                  "top": 414,
+                  "width": 180,
+                  "height": 16
+                },
+                {
+                  "_type": "ERDColumnView",
+                  "_id": "col_block_nonce_View",
+                  "_parent": {
+                    "$ref": "ERDEntBlock_View"
+                  },
+                  "model": {
+                    "$ref": "col_block_nonce"
+                  },
+                  "font": "Arial;13;0",
+                  "left": 565,
+                  "top": 430,
+                  "width": 180,
+                  "height": 16
+                }
+              ],
+              "font": "Arial;13;0",
+              "left": 560,
+              "top": 320,
+              "width": 190,
+              "height": 150
+            },
+            {
+              "_type": "ERDRelationshipView",
+              "_id": "Rel_User_Vehicle_View",
+              "_parent": {
+                "$ref": "ERDDiagramID"
+              },
+              "model": {
+                "$ref": "Rel_User_Vehicle"
+              },
+              "head": {
+                "$ref": "ERDEntVehicle_View"
+              },
+              "tail": {
+                "$ref": "ERDEntUser_View"
+              },
+              "lineStyle": 1,
+              "points": [],
+              "subViews": [
+                {
+                  "_type": "EdgeLabelView",
+                  "_id": "Rel_User_Vehicle_NameLabel",
+                  "_parent": {
+                    "$ref": "Rel_User_Vehicle_View"
+                  },
+                  "model": {
+                    "$ref": "Rel_User_Vehicle"
+                  },
+                  "text": "owns",
+                  "font": "Arial;11;0",
+                  "left": 0,
+                  "top": 0,
+                  "width": 80,
+                  "height": 13,
+                  "visible": true
+                }
+              ]
+            },
+            {
+              "_type": "ERDRelationshipView",
+              "_id": "Rel_User_Booking_View",
+              "_parent": {
+                "$ref": "ERDDiagramID"
+              },
+              "model": {
+                "$ref": "Rel_User_Booking"
+              },
+              "head": {
+                "$ref": "ERDEntBooking_View"
+              },
+              "tail": {
+                "$ref": "ERDEntUser_View"
+              },
+              "lineStyle": 1,
+              "points": [],
+              "subViews": [
+                {
+                  "_type": "EdgeLabelView",
+                  "_id": "Rel_User_Booking_NameLabel",
+                  "_parent": {
+                    "$ref": "Rel_User_Booking_View"
+                  },
+                  "model": {
+                    "$ref": "Rel_User_Booking"
+                  },
+                  "text": "makes",
+                  "font": "Arial;11;0",
+                  "left": 0,
+                  "top": 0,
+                  "width": 80,
+                  "height": 13,
+                  "visible": true
+                }
+              ]
+            },
+            {
+              "_type": "ERDRelationshipView",
+              "_id": "Rel_Vehicle_Booking_View",
+              "_parent": {
+                "$ref": "ERDDiagramID"
+              },
+              "model": {
+                "$ref": "Rel_Vehicle_Booking"
+              },
+              "head": {
+                "$ref": "ERDEntBooking_View"
+              },
+              "tail": {
+                "$ref": "ERDEntVehicle_View"
+              },
+              "lineStyle": 1,
+              "points": [],
+              "subViews": [
+                {
+                  "_type": "EdgeLabelView",
+                  "_id": "Rel_Vehicle_Booking_NameLabel",
+                  "_parent": {
+                    "$ref": "Rel_Vehicle_Booking_View"
+                  },
+                  "model": {
+                    "$ref": "Rel_Vehicle_Booking"
+                  },
+                  "text": "booked_for",
+                  "font": "Arial;11;0",
+                  "left": 0,
+                  "top": 0,
+                  "width": 80,
+                  "height": 13,
+                  "visible": true
+                }
+              ]
+            },
+            {
+              "_type": "ERDRelationshipView",
+              "_id": "Rel_Booking_Block_View",
+              "_parent": {
+                "$ref": "ERDDiagramID"
+              },
+              "model": {
+                "$ref": "Rel_Booking_Block"
+              },
+              "head": {
+                "$ref": "ERDEntBlock_View"
+              },
+              "tail": {
+                "$ref": "ERDEntBooking_View"
+              },
+              "lineStyle": 1,
+              "points": [],
+              "subViews": [
+                {
+                  "_type": "EdgeLabelView",
+                  "_id": "Rel_Booking_Block_NameLabel",
+                  "_parent": {
+                    "$ref": "Rel_Booking_Block_View"
+                  },
+                  "model": {
+                    "$ref": "Rel_Booking_Block"
+                  },
+                  "text": "recorded_in",
+                  "font": "Arial;11;0",
+                  "left": 0,
+                  "top": 0,
+                  "width": 80,
+                  "height": 13,
+                  "visible": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "_type": "ERDEntity",
+          "_id": "ERDEntUser",
+          "_parent": {
+            "$ref": "ERDModelID"
+          },
+          "name": "USER",
+          "columns": [
+            {
+              "_type": "ERDColumn",
+              "_id": "col_user_id",
+              "name": "id",
+              "type": "STRING",
+              "primaryKey": true
+            },
+            {
+              "_type": "ERDColumn",
+              "_id": "col_user_name",
+              "name": "name",
+              "type": "STRING"
+            },
+            {
+              "_type": "ERDColumn",
+              "_id": "col_user_email",
+              "name": "email",
+              "type": "STRING"
+            },
+            {
+              "_type": "ERDColumn",
+              "_id": "col_user_phone",
+              "name": "phone",
+              "type": "STRING"
+            },
+            {
+              "_type": "ERDColumn",
+              "_id": "col_user_password",
+              "name": "password",
+              "type": "STRING"
+            },
+            {
+              "_type": "ERDColumn",
+              "_id": "col_user_role",
+              "name": "role",
+              "type": "STRING"
+            },
+            {
+              "_type": "ERDColumn",
+              "_id": "col_user_isActive",
+              "name": "isActive",
+              "type": "BOOLEAN"
+            }
+          ]
+        },
+        {
+          "_type": "ERDEntity",
+          "_id": "ERDEntVehicle",
+          "_parent": {
+            "$ref": "ERDModelID"
+          },
+          "name": "VEHICLE",
+          "columns": [
+            {
+              "_type": "ERDColumn",
+              "_id": "col_vehicle_id",
+              "name": "id",
+              "type": "STRING",
+              "primaryKey": true
+            },
+            {
+              "_type": "ERDColumn",
+              "_id": "col_vehicle_ownerId",
+              "name": "ownerId",
+              "type": "STRING",
+              "foreignKey": true
+            },
+            {
+              "_type": "ERDColumn",
+              "_id": "col_vehicle_name",
+              "name": "vehicleName",
+              "type": "STRING"
+            },
+            {
+              "_type": "ERDColumn",
+              "_id": "col_vehicle_type",
+              "name": "vehicleType",
+              "type": "STRING"
+            },
+            {
+              "_type": "ERDColumn",
+              "_id": "col_vehicle_fuel",
+              "name": "fuelType",
+              "type": "STRING"
+            },
+            {
+              "_type": "ERDColumn",
+              "_id": "col_vehicle_price",
+              "name": "rentPrice",
+              "type": "NUMBER"
+            },
+            {
+              "_type": "ERDColumn",
+              "_id": "col_vehicle_approved",
+              "name": "isApproved",
+              "type": "BOOLEAN"
+            }
+          ]
+        },
+        {
+          "_type": "ERDEntity",
+          "_id": "ERDEntBooking",
+          "_parent": {
+            "$ref": "ERDModelID"
+          },
+          "name": "BOOKING",
+          "columns": [
+            {
+              "_type": "ERDColumn",
+              "_id": "col_booking_id",
+              "name": "id",
+              "type": "STRING",
+              "primaryKey": true
+            },
+            {
+              "_type": "ERDColumn",
+              "_id": "col_booking_vehicleId",
+              "name": "vehicleId",
+              "type": "STRING",
+              "foreignKey": true
+            },
+            {
+              "_type": "ERDColumn",
+              "_id": "col_booking_userId",
+              "name": "userId",
+              "type": "STRING",
+              "foreignKey": true
+            },
+            {
+              "_type": "ERDColumn",
+              "_id": "col_booking_from",
+              "name": "fromDate",
+              "type": "DATE"
+            },
+            {
+              "_type": "ERDColumn",
+              "_id": "col_booking_to",
+              "name": "toDate",
+              "type": "DATE"
+            },
+            {
+              "_type": "ERDColumn",
+              "_id": "col_booking_location",
+              "name": "location",
+              "type": "STRING"
+            },
+            {
+              "_type": "ERDColumn",
+              "_id": "col_booking_amount",
+              "name": "totalAmount",
+              "type": "NUMBER"
+            },
+            {
+              "_type": "ERDColumn",
+              "_id": "col_booking_status",
+              "name": "paymentStatus",
+              "type": "STRING"
+            }
+          ]
+        },
+        {
+          "_type": "ERDEntity",
+          "_id": "ERDEntBlock",
+          "_parent": {
+            "$ref": "ERDModelID"
+          },
+          "name": "BLOCK",
+          "columns": [
+            {
+              "_type": "ERDColumn",
+              "_id": "col_block_index",
+              "name": "index",
+              "type": "NUMBER",
+              "primaryKey": true
+            },
+            {
+              "_type": "ERDColumn",
+              "_id": "col_block_time",
+              "name": "timestamp",
+              "type": "NUMBER"
+            },
+            {
+              "_type": "ERDColumn",
+              "_id": "col_block_data",
+              "name": "data",
+              "type": "JSON"
+            },
+            {
+              "_type": "ERDColumn",
+              "_id": "col_block_prev",
+              "name": "previousHash",
+              "type": "STRING"
+            },
+            {
+              "_type": "ERDColumn",
+              "_id": "col_block_hash",
+              "name": "hash",
+              "type": "STRING"
+            },
+            {
+              "_type": "ERDColumn",
+              "_id": "col_block_nonce",
+              "name": "nonce",
+              "type": "NUMBER"
+            }
+          ]
+        },
+        {
+          "_type": "ERDRelationship",
+          "_id": "Rel_User_Vehicle",
+          "_parent": {
+            "$ref": "ERDEntUser"
+          },
+          "name": "owns",
+          "end1": {
+            "_type": "ERDRelationshipEnd",
+            "_id": "Rel_User_Vehicle_End1",
+            "_parent": {
+              "$ref": "Rel_User_Vehicle"
+            },
+            "reference": {
+              "$ref": "ERDEntUser"
+            },
+            "cardinality": "1"
+          },
+          "end2": {
+            "_type": "ERDRelationshipEnd",
+            "_id": "Rel_User_Vehicle_End2",
+            "_parent": {
+              "$ref": "Rel_User_Vehicle"
+            },
+            "reference": {
+              "$ref": "ERDEntVehicle"
+            },
+            "cardinality": "0..*"
+          }
+        },
+        {
+          "_type": "ERDRelationship",
+          "_id": "Rel_User_Booking",
+          "_parent": {
+            "$ref": "ERDEntUser"
+          },
+          "name": "makes",
+          "end1": {
+            "_type": "ERDRelationshipEnd",
+            "_id": "Rel_User_Booking_End1",
+            "_parent": {
+              "$ref": "Rel_User_Booking"
+            },
+            "reference": {
+              "$ref": "ERDEntUser"
+            },
+            "cardinality": "1"
+          },
+          "end2": {
+            "_type": "ERDRelationshipEnd",
+            "_id": "Rel_User_Booking_End2",
+            "_parent": {
+              "$ref": "Rel_User_Booking"
+            },
+            "reference": {
+              "$ref": "ERDEntBooking"
+            },
+            "cardinality": "0..*"
+          }
+        },
+        {
+          "_type": "ERDRelationship",
+          "_id": "Rel_Vehicle_Booking",
+          "_parent": {
+            "$ref": "ERDEntVehicle"
+          },
+          "name": "booked_for",
+          "end1": {
+            "_type": "ERDRelationshipEnd",
+            "_id": "Rel_Vehicle_Booking_End1",
+            "_parent": {
+              "$ref": "Rel_Vehicle_Booking"
+            },
+            "reference": {
+              "$ref": "ERDEntVehicle"
+            },
+            "cardinality": "1"
+          },
+          "end2": {
+            "_type": "ERDRelationshipEnd",
+            "_id": "Rel_Vehicle_Booking_End2",
+            "_parent": {
+              "$ref": "Rel_Vehicle_Booking"
+            },
+            "reference": {
+              "$ref": "ERDEntBooking"
+            },
+            "cardinality": "0..*"
+          }
+        },
+        {
+          "_type": "ERDRelationship",
+          "_id": "Rel_Booking_Block",
+          "_parent": {
+            "$ref": "ERDEntBooking"
+          },
+          "name": "recorded_in",
+          "end1": {
+            "_type": "ERDRelationshipEnd",
+            "_id": "Rel_Booking_Block_End1",
+            "_parent": {
+              "$ref": "Rel_Booking_Block"
+            },
+            "reference": {
+              "$ref": "ERDEntBooking"
+            },
+            "cardinality": "1"
+          },
+          "end2": {
+            "_type": "ERDRelationshipEnd",
+            "_id": "Rel_Booking_Block_End2",
+            "_parent": {
+              "$ref": "Rel_Booking_Block"
+            },
+            "reference": {
+              "$ref": "ERDEntBlock"
+            },
+            "cardinality": "1"
+          }
+        }
+      ]
     }
   ]
 }

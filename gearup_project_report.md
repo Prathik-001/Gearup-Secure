@@ -236,6 +236,8 @@ graph LR
 
 ### 5.3 Entity Relationship (ER) Diagram
 
+![ER Diagram](file:///c:/Users/prath/OneDrive/Documents/1/gearup-secure/er_diagram.png)
+
 ```mermaid
 erDiagram
     USER {
