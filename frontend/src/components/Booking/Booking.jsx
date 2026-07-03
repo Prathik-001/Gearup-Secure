@@ -188,11 +188,6 @@ const Booking = () => {
   }, [bookingData.fromDate, bookingData.toDate, vehicleData.rentPrice]);
 
   useEffect(() => {
-    if (!bookingData.location) {
-      setSelectedShop(null);
-      return;
-    }
-
     // Give Vite / React DOM a split second to mount the #map element before initializing Leaflet
     const timer = setTimeout(() => {
       const L = window.L;
@@ -212,11 +207,22 @@ const Booking = () => {
       const mapEl = document.getElementById("map");
       if (!mapEl) return;
 
-      const shopInfo = locationShops[bookingData.location] || {
-        center: [20.5937, 78.9629],
-        zoom: 5,
-        shops: []
-      };
+      // Determine center, zoom, and shops to show
+      let shopsToShow = [];
+      let center = [20.5937, 78.9629]; // India center
+      let zoom = 5;
+
+      if (bookingData.location && locationShops[bookingData.location]) {
+        const shopInfo = locationShops[bookingData.location];
+        center = shopInfo.center;
+        zoom = shopInfo.zoom;
+        shopsToShow = shopInfo.shops;
+      } else {
+        // Show all shops across all locations
+        Object.keys(locationShops).forEach(key => {
+          shopsToShow.push(...locationShops[key].shops);
+        });
+      }
 
       // Clean up previous map instance
       if (mapRef.current) {
@@ -225,7 +231,7 @@ const Booking = () => {
       }
 
       // Initialize map
-      const map = L.map('map').setView(shopInfo.center, shopInfo.zoom);
+      const map = L.map('map').setView(center, zoom);
       mapRef.current = map;
 
       // Add OpenStreetMap tile layer
@@ -235,7 +241,7 @@ const Booking = () => {
 
       // Add markers
       markersRef.current = [];
-      shopInfo.shops.forEach((shop, index) => {
+      shopsToShow.forEach((shop, index) => {
         const marker = L.marker(shop.coords).addTo(map);
         marker.bindPopup(`
           <div class="p-1">
@@ -251,8 +257,8 @@ const Booking = () => {
 
         markersRef.current.push(marker);
 
-        // Open the popup of the first shop by default
-        if (index === 0) {
+        // Open the popup of the first shop by default if we are filtered to one location
+        if (bookingData.location && index === 0) {
           marker.openPopup();
           setSelectedShop(shop);
         }
@@ -457,51 +463,60 @@ const Booking = () => {
           </div>
 
           {/* Interactive Map of Nearest Rental Shops */}
-          {bookingData.location && (
-            <div className="bg-gray-50 p-6 rounded-xl border border-gray-200 space-y-4">
-              <div className="flex justify-between items-center">
-                <h3 className="text-lg font-semibold text-gray-800 flex items-center gap-2">
-                  <MapPin className="text-blue-600 animate-pulse" size={20} />
-                  Nearest Rental Shops in {bookingData.location.split(',')[0]}
-                </h3>
-                <span className="text-xs font-semibold text-blue-600 bg-blue-50 px-2.5 py-1 rounded-full border border-blue-100">
-                  {locationShops[bookingData.location]?.shops.length || 0} Shops Found
-                </span>
-              </div>
-              
-              <div 
-                id="map" 
-                className="h-64 w-full rounded-lg border border-gray-300 shadow-inner z-10"
-                style={{ minHeight: '260px' }}
-              ></div>
-
-              {selectedShop ? (
-                <div className="p-4 bg-white rounded-lg border border-gray-200 shadow-sm flex flex-col md:flex-row justify-between gap-4 items-start md:items-center">
-                  <div>
-                    <h4 className="font-bold text-gray-900 text-sm flex items-center gap-1.5">
-                      <Check className="text-green-600" size={16} /> {selectedShop.name}
-                    </h4>
-                    <p className="text-xs text-gray-600 mt-1">{selectedShop.address}</p>
-                    <p className="text-xs text-gray-400 mt-0.5">Contact: {selectedShop.phone}</p>
-                  </div>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      toast.info(`Pickup point confirmed at ${selectedShop.name}!`, {
-                        position: "bottom-right",
-                        autoClose: 2000
-                      });
-                    }}
-                    className="w-full md:w-auto px-4 py-2 bg-blue-600 text-white font-semibold rounded-lg text-xs hover:bg-blue-700 transition cursor-pointer"
-                  >
-                    Confirm Pickup Point
-                  </button>
-                </div>
-              ) : (
-                <p className="text-xs text-gray-500 italic text-center py-2">Click on any shop marker on the map to view details.</p>
-              )}
+          <div className="bg-gray-50 p-6 rounded-xl border border-gray-200 space-y-4">
+            <div className="flex justify-between items-center">
+              <h3 className="text-lg font-semibold text-gray-800 flex items-center gap-2">
+                <MapPin className="text-blue-600 animate-pulse" size={20} />
+                {bookingData.location 
+                  ? `Nearest Rental Shops in ${bookingData.location.split(',')[0]}`
+                  : 'Our Rental Shop Locations'}
+              </h3>
+              <span className="text-xs font-semibold text-blue-600 bg-blue-50 px-2.5 py-1 rounded-full border border-blue-100">
+                {bookingData.location 
+                  ? (locationShops[bookingData.location]?.shops.length || 0)
+                  : Object.values(locationShops).reduce((acc, loc) => acc + loc.shops.length, 0)} Shops Available
+              </span>
             </div>
-          )}
+            
+            <div 
+              id="map" 
+              className="h-64 w-full rounded-lg border border-gray-300 shadow-inner z-10"
+              style={{ minHeight: '260px' }}
+            ></div>
+
+            {selectedShop ? (
+              <div className="p-4 bg-white rounded-lg border border-gray-200 shadow-sm flex flex-col md:flex-row justify-between gap-4 items-start md:items-center">
+                <div>
+                  <h4 className="font-bold text-gray-900 text-sm flex items-center gap-1.5">
+                    <Check className="text-green-600" size={16} /> {selectedShop.name}
+                  </h4>
+                  <p className="text-xs text-gray-600 mt-1">{selectedShop.address}</p>
+                  <p className="text-xs text-gray-400 mt-0.5">Contact: {selectedShop.phone}</p>
+                </div>
+                <button
+                  type="button"
+                  onClick={() => {
+                    // Automatically select the corresponding pickup location if user confirms a shop from the map
+                    const locationKey = Object.keys(locationShops).find(key => 
+                      locationShops[key].shops.some(s => s.name === selectedShop.name)
+                    );
+                    if (locationKey && bookingData.location !== locationKey) {
+                      setBookingData(prev => ({ ...prev, location: locationKey }));
+                    }
+                    toast.success(`Pickup point confirmed at ${selectedShop.name}!`, {
+                      position: "bottom-right",
+                      autoClose: 2000
+                    });
+                  }}
+                  className="w-full md:w-auto px-4 py-2 bg-blue-600 text-white font-semibold rounded-lg text-xs hover:bg-blue-700 transition cursor-pointer"
+                >
+                  Confirm Pickup Point
+                </button>
+              </div>
+            ) : (
+              <p className="text-xs text-gray-500 italic text-center py-2">Click on any shop marker on the map to view details.</p>
+            )}
+          </div>
 
           {/* Payment Info */}
           <div className="bg-gray-50 p-6 rounded-xl space-y-6">
