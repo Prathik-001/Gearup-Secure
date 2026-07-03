@@ -135,9 +135,10 @@ The system is designed with a highly responsive, clean user dashboard. Users onl
 
 ## CHAPTER 5: SYSTEM DESIGN
 
-### 5.1 Data Flow Diagram (DFD)
-
 #### Level 1 DFD – Process Flow Diagram
+
+![Data Flow Diagram](file:///c:/Users/prath/OneDrive/Documents/1/gearup-secure/dfd_diagram.png)
+
 ```mermaid
 graph TD
     User([User / Rider])
@@ -202,6 +203,8 @@ graph TD
 ---
 
 ### 5.2 Use Case Diagram
+
+![Use Case Diagram](file:///c:/Users/prath/OneDrive/Documents/1/gearup-secure/use_case_diagram.png)
 
 ```mermaid
 graph LR
